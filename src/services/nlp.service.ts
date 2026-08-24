@@ -46,6 +46,7 @@ export async function initModels(): Promise<boolean> {
     const initPromise = async () => {
       const transformers = await import('@xenova/transformers');
       transformers.env.backends.onnx.wasm.numThreads = 1;
+      transformers.env.backends.onnx.wasm.wasmPaths = 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2/dist/';
       
       featureExtractor = await transformers.pipeline(
         'feature-extraction',
