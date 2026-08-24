@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { useShoppingList } from '../hooks/useShoppingList';
 import { useStore } from '../store/useStore';
 
@@ -11,7 +12,9 @@ const categoryEmoji: Record<string, string> = {
   pantry: '🫙',
   personal_care: '🧴',
   frozen: '🧊',
-  other: '📦'
+  other: '📦',
+  stationary: '✏️',
+  household: '🧹'
 };
 
 export const CartScreen: React.FC = () => {
@@ -83,59 +86,63 @@ export const CartScreen: React.FC = () => {
         </div>
       </div>
 
-      {Object.entries(groupedCart).map(([category, items]) => (
-        <div key={category} className="cart-category">
-          <h3 className="category-title">
-            {categoryEmoji[category] || '📦'} {category.charAt(0).toUpperCase() + category.slice(1).replace('_', ' ')}
-          </h3>
-          
-          {items.map(item => (
-            <div key={item.id} className={`cart-item ${item.completed ? 'completed' : ''}`}>
-              <div className="item-details" onClick={() => toggleComplete(item.id)}>
-                <div className="item-name">{item.name}</div>
-                <div className="item-price">
-                  {item.price > 0 ? `₹${item.price}` : ''} 
-                  {item.price > 0 && item.unit !== 'pcs' ? ` / ${item.unit}` : ''}
-                </div>
-              </div>
-              
-              {!item.completed && (
-                <div className="qty-stepper">
-                  <button 
-                    className="qty-btn"
-                    onClick={() => {
-                      if (item.quantity > 1) {
-                        updateQuantity(item.name, item.quantity - 1, item.unit);
-                      }
-                    }}
-                  >
-                    <span className="material-symbols-outlined" style={{ fontSize: 18 }}>remove</span>
+      <AnimatePresence>
+        {Object.entries(groupedCart).map(([category, items]) => (
+          <motion.div 
+            key={category} 
+            className="cart-category"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, height: 0 }}
+          >
+            <h3 className="category-title">
+              {categoryEmoji[category] || '📦'} {category.charAt(0).toUpperCase() + category.slice(1).replace('_', ' ')}
+            </h3>
+            
+            <AnimatePresence>
+              {items.map(item => (
+                <motion.div 
+                  key={item.id} 
+                  className={`cart-item ${item.completed ? 'completed' : ''}`}
+                  layout
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="item-details" onClick={() => toggleComplete(item.id)}>
+                    <div className="item-name">{item.name}</div>
+                    <div className="item-price">
+                      {item.price > 0 ? `₹${item.price}` : ''} 
+                      {item.price > 0 && item.unit !== 'pcs' ? ` / ${item.unit}` : ''}
+                    </div>
+                  </div>
+                  
+                  <div className="qty-stepper">
+                    <button 
+                      className="qty-btn"
+                      onClick={() => updateQuantity(item.id, item.quantity - (item.unit === 'kg' ? 0.5 : 1))}
+                    >
+                      <span className="material-symbols-outlined" style={{ fontSize: 18 }}>remove</span>
+                    </button>
+                    <span>{item.quantity} {item.unit}</span>
+                    <button 
+                      className="qty-btn"
+                      onClick={() => updateQuantity(item.id, item.quantity + (item.unit === 'kg' ? 0.5 : 1))}
+                    >
+                      <span className="material-symbols-outlined" style={{ fontSize: 18 }}>add</span>
+                    </button>
+                  </div>
+                  
+                  <button className="check-btn" onClick={() => toggleComplete(item.id)}>
+                    <span className="material-symbols-outlined">check</span>
                   </button>
-                  <span style={{ fontSize: 14, fontWeight: 500, minWidth: 40, textAlign: 'center', padding: '0 4px' }}>
-                    {item.quantity} {item.unit}
-                  </span>
-                  <button 
-                    className="qty-btn"
-                    onClick={() => updateQuantity(item.name, item.quantity + 1, item.unit)}
-                  >
-                    <span className="material-symbols-outlined" style={{ fontSize: 18 }}>add</span>
-                  </button>
-                </div>
-              )}
-              
-              <button 
-                className="check-btn" 
-                onClick={(e) => {
-                  e.stopPropagation();
-                  toggleComplete(item.id);
-                }}
-              >
-                <span className="material-symbols-outlined" style={{ fontSize: 20 }}>check</span>
-              </button>
-            </div>
-          ))}
-        </div>
-      ))}
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        ))}
+      </AnimatePresence>
       
       {totalPrice > 0 && (
         <div 

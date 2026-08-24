@@ -64,36 +64,43 @@ function App() {
   }
 
   return (
-    <>
-      <div className="app-header">
-        <div className="app-title">
-          <span className="material-symbols-outlined text-primary">shopping_basket</span>
-          Voice Cart
+  return (
+    <div className="app-layout">
+      {/* Left Panel: Header, Mic, and Empty State on Desktop */}
+      <div className="left-panel">
+        <div className="app-header">
+          <div className="app-title">
+            <span className="material-symbols-outlined text-primary">shopping_basket</span>
+            Voice Cart
+          </div>
+          <button 
+            className="lang-btn"
+            onClick={() => setLanguagePickerOpen(true)}
+          >
+            {currentLangObj.code.split('-')[0].toUpperCase()}
+            <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_drop_down</span>
+          </button>
         </div>
-        <button 
-          className="lang-btn"
-          onClick={() => setLanguagePickerOpen(true)}
-        >
-          {currentLangObj.code.split('-')[0].toUpperCase()}
-          <span className="material-symbols-outlined" style={{ fontSize: 18 }}>arrow_drop_down</span>
-        </button>
-      </div>
 
-      <div className="main-content">
-        {cartCount === 0 ? (
+        {cartCount === 0 && (
           <EmptyCart onStartShopping={toggleListening} />
-        ) : (
-          <CartScreen />
+        )}
+
+        {isSupported && !isListening && !isProcessing && !isLanguagePickerOpen && (
+          <div className="fab-container">
+            <button className="fab" onClick={toggleListening}>
+              <span className="material-symbols-outlined">mic</span>
+            </button>
+          </div>
         )}
       </div>
 
-      {isSupported && !isListening && !isProcessing && !isLanguagePickerOpen && (
-        <div className="fab-container">
-          <button className="fab" onClick={toggleListening}>
-            <span className="material-symbols-outlined">mic</span>
-          </button>
+      {/* Right Panel: Cart Content */}
+      <div className="right-panel">
+        <div className="main-content" style={{ display: cartCount === 0 ? 'none' : 'block' }}>
+          <CartScreen />
         </div>
-      )}
+      </div>
 
       {/* Overlays & Modals */}
       <LanguagePicker 
@@ -128,7 +135,7 @@ function App() {
       )}
       
       <Toast />
-    </>
+    </div>
   );
 }
 
