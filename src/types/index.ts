@@ -19,6 +19,11 @@ export interface ParsedIntent {
   unit: string;
 }
 
+export interface ParsedMultiIntent {
+  action: 'add' | 'remove' | 'search' | 'update_qty';
+  items: ParsedIntent[];
+}
+
 export interface Language {
   code: string;
   name: string;

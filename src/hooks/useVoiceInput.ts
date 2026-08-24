@@ -1,7 +1,6 @@
 import { useCallback } from 'react';
 import { useStore } from '../store/useStore';
 import { startListening, stopListening, isSupported } from '../services/stt.service';
-import { preprocess } from '../services/preprocessor.service';
 import { parseIntent } from '../services/nlp.service';
 import { useShoppingList } from './useShoppingList';
 import { searchProducts, extractPriceFilter } from '../services/search.service';
@@ -21,28 +20,40 @@ export function useVoiceInput() {
     setTranscript(text);
 
     try {
-      const { cleaned, isMultiItem, parts } = preprocess(text);
-      const segments = isMultiItem ? parts : [cleaned];
+      const result = await parseIntent(text);
+      const { action, items } = result;
 
-      for (const segment of segments) {
-        const intent = await parseIntent(segment);
-        
-        switch (intent.action) {
-          case 'add':
-            addItem(intent.item, intent.quantity, intent.unit);
-            break;
-          case 'remove':
-            removeItem(intent.item);
-            break;
-          case 'update_qty':
-            updateQuantity(intent.item, intent.quantity, intent.unit);
-            break;
-          case 'search': {
-            const maxPrice = extractPriceFilter(segment);
-            const results = searchProducts(intent.item, maxPrice ?? undefined);
-            setSearchResults(results);
-            break;
+      switch (action) {
+        case 'add':
+          for (const item of items) {
+            addItem(item.item, item.quantity, item.unit);
           }
+          if (items.length > 1) {
+            showToast(`Added ${items.length} items to cart`);
+          }
+          break;
+
+        case 'remove':
+          for (const item of items) {
+            removeItem(item.item);
+          }
+          break;
+
+        case 'update_qty':
+          for (const item of items) {
+            updateQuantity(item.item, item.quantity, item.unit);
+          }
+          break;
+
+        case 'search': {
+          // For search, use the first item
+          const firstItem = items[0];
+          if (firstItem) {
+            const maxPrice = extractPriceFilter(text);
+            const results = searchProducts(firstItem.item, maxPrice ?? undefined);
+            setSearchResults(results);
+          }
+          break;
         }
       }
     } catch (error) {

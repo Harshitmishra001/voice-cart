@@ -1,13 +1,11 @@
-import type { ParsedIntent } from '../types';
-import foodwords from '../data/foodwords.json';
+import type { ParsedIntent, ParsedMultiIntent } from '../types';
 import { INTENT_LABELS, CONFIDENCE_THRESHOLD } from '../constants';
+import { extractEntities } from './entityExtractor';
 
 let featureExtractor: any = null;
 let rawWeights: any = null;
 let modelsLoaded = false;
 let modelLoadFailed = false;
-
-const foodwordsMap = foodwords as Record<string, string>;
 
 // --- Math Utilities for Raw JSON Weights ---
 function relu(v: number) {
@@ -27,7 +25,6 @@ function denseLayer(vec: number[], w: number[], b: number[], units: number) {
   for (let i = 0; i < units; i++) {
     let sum = b[i];
     for (let j = 0; j < inputLen; j++) {
-      // TensorFlow flattens weights in column-major style for matrix multiplication: [input_dim * output_dim] -> w[j * units + i]
       sum += vec[j] * w[j * units + i];
     }
     out[i] = sum;
@@ -149,79 +146,33 @@ function classifyWithRegex(text: string): { action: string; confidence: number }
   return { action: 'add', confidence: 0.5 };
 }
 
-// --- Entity Extraction ---
+// --- Main Public API ---
 
-function extractEntities(text: string): { item: string; quantity: number; unit: string } {
-  const t = text.toLowerCase().trim();
-
-  const qtyMatch = t.match(
-    /(\d+(?:\.\d+)?)\s*(kg|kilo|kilos|g|gram|grams|litre|litres|liter|liters|l|ml|pcs|pieces|packet|packets|bottle|bottles|dozen|box|boxes)/i
-  );
-  let quantity = 1;
-  let unit = 'pcs';
-
-  if (qtyMatch) {
-    quantity = parseFloat(qtyMatch[1]);
-    const rawUnit = qtyMatch[2].toLowerCase();
-    if (['kilo', 'kilos'].includes(rawUnit)) unit = 'kg';
-    else if (['gram', 'grams'].includes(rawUnit)) unit = 'g';
-    else if (['litre', 'litres', 'liter', 'liters', 'l'].includes(rawUnit)) unit = 'L';
-    else if (['piece', 'pieces', 'pcs'].includes(rawUnit)) unit = 'pcs';
-    else if (['packet', 'packets'].includes(rawUnit)) unit = 'packet';
-    else if (['bottle', 'bottles'].includes(rawUnit)) unit = 'bottle';
-    else if (['box', 'boxes'].includes(rawUnit)) unit = 'box';
-    else unit = rawUnit;
-  } else {
-    const numMatch = t.match(/\b(\d+)\b/);
-    if (numMatch) {
-      quantity = parseInt(numMatch[1], 10);
-    }
-  }
-
-  const words = t.split(/\s+/);
-  let item = '';
-
-  for (let len = 3; len >= 1; len--) {
-    for (let i = 0; i <= words.length - len; i++) {
-      const phrase = words.slice(i, i + len).join(' ');
-      if (foodwordsMap[phrase]) {
-        item = foodwordsMap[phrase];
-        break;
-      }
-    }
-    if (item) break;
-  }
-
-  if (!item) {
-    const stopWords = new Set([
-      'add', 'buy', 'get', 'remove', 'delete', 'find', 'search', 'show',
-      'change', 'update', 'set', 'make', 'i', 'me', 'my', 'the', 'a', 'an',
-      'to', 'from', 'of', 'in', 'on', 'it', 'is', 'do', 'some', 'please',
-      'want', 'need', 'can', 'list', 'cart', 'shopping', 'daal', 'daalo',
-      'hatao', 'dikhao', 'lao', 'lena', 'chahiye', 'bhi', 'aur', 'ko',
-      'se', 'hai', 'mein', 'ka', 'ke', 'ki', 'mat', 'nahi', 'karo',
-      'quantity', 'bottles', 'bottle', 'kg', 'kilo', 'litre', 'liter',
-      'gram', 'packet', 'pcs', 'pieces', 'dozen', 'under', 'below',
-    ]);
-
-    const candidates = words.filter(
-      (w) => w.length > 1 && !stopWords.has(w) && !/^\d+$/.test(w)
-    );
-
-    item = candidates.join(' ') || words[words.length - 1] || 'Unknown Item';
-  }
-
-  return { item: item || 'Unknown Item', quantity, unit };
-}
-
-export async function parseIntent(transcript: string): Promise<ParsedIntent> {
+/** Parse a full transcript into an intent + multiple extracted entities */
+export async function parseIntent(transcript: string): Promise<ParsedMultiIntent> {
   const { action } = await classifyWithModel(transcript);
-  const { item, quantity, unit } = extractEntities(transcript);
+  const entities = extractEntities(transcript);
+
+  // If no entities found, return a single item with the raw transcript
+  if (entities.length === 0) {
+    return {
+      action: action as ParsedMultiIntent['action'],
+      items: [{
+        action: action as ParsedIntent['action'],
+        item: transcript.trim() || 'Unknown Item',
+        quantity: 1,
+        unit: 'pcs',
+      }],
+    };
+  }
 
   return {
-    action: action as ParsedIntent['action'],
-    item,
-    quantity,
-    unit,
+    action: action as ParsedMultiIntent['action'],
+    items: entities.map(e => ({
+      action: action as ParsedIntent['action'],
+      item: e.item,
+      quantity: e.quantity,
+      unit: e.unit,
+    })),
   };
 }

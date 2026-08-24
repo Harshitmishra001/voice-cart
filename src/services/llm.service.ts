@@ -1,20 +1,20 @@
 const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-const MODEL = 'mistralai/mistral-7b-instruct:free';
+const MODEL = 'google/gemma-4-31b-it:free';
 
-function getApiKey(): string | null {
+function getApiKey(): string {
   try {
     return (
       localStorage.getItem('openrouter_api_key') ||
       (import.meta as any).env?.VITE_OPENROUTER_API_KEY ||
-      null
+      ''
     );
   } catch {
-    return null;
+    return '';
   }
 }
 
 export function hasApiKey(): boolean {
-  return !!getApiKey();
+  return true;
 }
 
 export function setApiKey(key: string): void {
