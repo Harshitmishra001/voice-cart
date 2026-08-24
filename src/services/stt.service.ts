@@ -1,16 +1,70 @@
-/**
- * Web Speech API wrapper for STT capabilities.
- * NOTE: For robust multilingual support, a fallback to 
- * OpenAI Whisper or Google Cloud Speech-to-Text is recommended.
- */
+let recognition: any = null;
+
+export const isSupported = () => {
+  return 'SpeechRecognition' in window || 'webkitSpeechRecognition' in window;
+};
+
 export const startListening = (
-  languageCode: string,
-  onResult: (text: string) => void,
-  onEnd: () => void
+  langCode: string,
+  onResult: (interim: string, final: string) => void,
+  onEnd: () => void,
+  onError: (error: string) => void
 ) => {
-  // Stub: Initialize SpeechRecognition, set lang, start listening
+  if (!isSupported()) {
+    onError('Browser not supported for voice recognition.');
+    return;
+  }
+
+  const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+  
+  if (recognition) {
+    recognition.stop();
+  }
+
+  recognition = new SpeechRecognition();
+  recognition.lang = langCode;
+  recognition.continuous = false;
+  recognition.interimResults = true;
+
+  recognition.onresult = (event: any) => {
+    let interim = '';
+    let final = '';
+
+    for (let i = event.resultIndex; i < event.results.length; i++) {
+      const transcript = event.results[i][0].transcript;
+      if (event.results[i].isFinal) {
+        final += transcript;
+      } else {
+        interim += transcript;
+      }
+    }
+    
+    onResult(interim, final);
+  };
+
+  recognition.onerror = (event: any) => {
+    let errorMessage = 'An error occurred during speech recognition.';
+    if (event.error === 'not-allowed') {
+      errorMessage = 'Microphone permission denied. Please allow microphone access.';
+    }
+    onError(errorMessage);
+  };
+
+  recognition.onend = () => {
+    onEnd();
+    recognition = null;
+  };
+
+  try {
+    recognition.start();
+  } catch (err) {
+    onError('Failed to start speech recognition.');
+  }
 };
 
 export const stopListening = () => {
-  // Stub: Stop current SpeechRecognition instance
+  if (recognition) {
+    recognition.stop();
+    recognition = null;
+  }
 };

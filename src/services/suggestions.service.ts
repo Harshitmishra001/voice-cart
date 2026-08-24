@@ -1,15 +1,20 @@
+import { getSuggestions, hasApiKey } from './llm.service';
 import { SEASONAL_ITEMS } from '../constants';
 
-/**
- * Handles smart and seasonal suggestions logic.
- */
-export const fetchSuggestions = async (cartHistory: any[]) => {
-  // Stub: Fetch suggestions based on past lists or current month
-  const currentMonth = new Date().getMonth() + 1;
-  const monthKey = currentMonth.toString().padStart(2, '0');
-  
-  return [
-    { type: 'history', item: 'Eggs' },
-    { type: 'seasonal', item: SEASONAL_ITEMS[monthKey]?.[0] || 'Apples' }
-  ];
-};
+export async function fetchSuggestions(
+  cartItems: string[]
+): Promise<{ ai: string[]; seasonal: string[] }> {
+  const currentMonth = new Date().getMonth();
+  const seasonal = SEASONAL_ITEMS[currentMonth] || [];
+
+  if (hasApiKey() && cartItems.length > 0) {
+    try {
+      const ai = await getSuggestions(cartItems);
+      return { ai, seasonal };
+    } catch {
+      return { ai: [], seasonal };
+    }
+  }
+
+  return { ai: [], seasonal };
+}

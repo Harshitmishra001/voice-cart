@@ -1,14 +1,25 @@
 import { useCallback } from 'react';
 import { useStore } from '../store/useStore';
-import { searchProducts } from '../services/search.service';
+import { searchProducts, extractPriceFilter } from '../services/search.service';
 
-export const useVoiceSearch = () => {
-  const { searchResults, currentLanguage } = useStore();
+export function useVoiceSearch() {
+  const searchResults = useStore((s) => s.searchResults);
+  const setSearchResults = useStore((s) => s.setSearchResults);
 
-  const handleSearch = useCallback(async (query: string) => {
-    // Stub: invoke searchProducts service
-    // update searchResults in store
-  }, [currentLanguage]);
+  const handleSearch = useCallback((query: string) => {
+    const maxPrice = extractPriceFilter(query);
+    const results = searchProducts(query, maxPrice ?? undefined);
+    setSearchResults(results);
+  }, [setSearchResults]);
 
-  return { searchResults, handleSearch };
-};
+  const clearResults = useCallback(() => {
+    setSearchResults([]);
+  }, [setSearchResults]);
+
+  return {
+    searchResults,
+    handleSearch,
+    clearResults,
+    hasResults: searchResults.length > 0,
+  };
+}

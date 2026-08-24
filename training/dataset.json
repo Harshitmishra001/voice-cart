@@ -1,0 +1,1466 @@
+﻿[
+    {
+        "text":  "I\u0027m thinking about adding some apples.",
+        "label":  "add"
+    },
+    {
+        "text":  "Let\u0027s add rice to the cart for tonight’s dinner.",
+        "label":  "add"
+    },
+    {
+        "text":  "Do you have any more tea? I\u0027ll pick up a packet this time.",
+        "label":  "add"
+    },
+    {
+        "text":  "Need to buy some milk, got it already?",
+        "label":  "add"
+    },
+    {
+        "text":  "Are there any new snacks yaar? Let me grab them today.",
+        "label":  "add"
+    },
+    {
+        "text":  "I forgot to ask, do we need carrots or potatoes?",
+        "label":  "add"
+    },
+    {
+        "text":  "Let\u0027s get some cheese for the kids\u0027 lunch next week.",
+        "label":  "add"
+    },
+    {
+        "text":  "Do you want me to pick up bread or pasta?",
+        "label":  "add"
+    },
+    {
+        "text":  "How about adding a few more vegetables this time?",
+        "label":  "add"
+    },
+    {
+        "text":  "We need to buy eggs for breakfast tomorrow morning.",
+        "label":  "add"
+    },
+    {
+        "text":  "Yaar, I\u0027ll just take a few more fruits and veggies.",
+        "label":  "add"
+    },
+    {
+        "text":  "Let\u0027s get some flour and sugar for baking today.",
+        "label":  "add"
+    },
+    {
+        "text":  "Do you have any new spices we should try?",
+        "label":  "add"
+    },
+    {
+        "text":  "I think we\u0027re low on rice, better pick up another bag.",
+        "label":  "add"
+    },
+    {
+        "text":  "How about picking up pasta instead of bread this time?",
+        "label":  "add"
+    },
+    {
+        "text":  "Need to buy butter for the cake next weekend.",
+        "label":  "add"
+    },
+    {
+        "text":  "Are there any more fresh fruits I can add?",
+        "label":  "add"
+    },
+    {
+        "text":  "Let\u0027s get some potatoes and onions together.",
+        "label":  "add"
+    },
+    {
+        "text":  "Do you want me to grab some milk or yogurt?",
+        "label":  "add"
+    },
+    {
+        "text":  "I think we need a few more veggies, like beans",
+        "label":  "add"
+    },
+    {
+        "text":  "How about picking up rice and dal for lunch today?",
+        "label":  "add"
+    },
+    {
+        "text":  "Need to buy bread and jam for the weekend.",
+        "label":  "add"
+    },
+    {
+        "text":  "Are there any new snacks yaar? Let\u0027s add them now.",
+        "label":  "add"
+    },
+    {
+        "text":  "Let\u0027s get some cheese and crackers together.",
+        "label":  "add"
+    },
+    {
+        "text":  "Do you have any more tea or coffee options?",
+        "label":  "add"
+    },
+    {
+        "text":  "We need milk and eggs for breakfast tomorrow morning.",
+        "label":  "add"
+    },
+    {
+        "text":  "How about adding potatoes to our list?",
+        "label":  "add"
+    },
+    {
+        "text":  "Need to buy bread and butter for the kids’ sandwiches.",
+        "label":  "add"
+    },
+    {
+        "text":  "Are there any new fruits yaar? I\u0027ll add them this time.",
+        "label":  "add"
+    },
+    {
+        "text":  "Let\u0027s get some flour, sugar, and rice today",
+        "label":  "add"
+    },
+    {
+        "text":  "Do you want me to grab milk or yogurt?",
+        "label":  "add"
+    },
+    {
+        "text":  "We need carrots, potatoes, and tomatoes next week.",
+        "label":  "add"
+    },
+    {
+        "text":  "How about adding butter and cheese for dessert?",
+        "label":  "add"
+    },
+    {
+        "text":  "Need to buy more rice and dal for tonight’s dinner.",
+        "label":  "add"
+    },
+    {
+        "text":  "Are there any new snacks yaar? I\u0027ll add them today",
+        "label":  "add"
+    },
+    {
+        "text":  "Let\u0027s get some bread and jam for the weekend.",
+        "label":  "add"
+    },
+    {
+        "text":  "Do you want me to pick up a packet of tea or coffee?",
+        "label":  "add"
+    },
+    {
+        "text":  "We need eggs, milk, and bread for breakfast tomorrow morning.",
+        "label":  "add"
+    },
+    {
+        "text":  "How about picking up carrots and potatoes together?",
+        "label":  "add"
+    },
+    {
+        "text":  "Need to buy butter and cheese for lunch today",
+        "label":  "add"
+    },
+    {
+        "text":  "Are there any new fruits yaar? I\u0027ll add them next time.",
+        "label":  "add"
+    },
+    {
+        "text":  "मैं दूध लूंगा यार",
+        "label":  "add"
+    },
+    {
+        "text":  "वो पानी के कप चाहेगा, yaar?",
+        "label":  "add"
+    },
+    {
+        "text":  "केक तीन बोतलें लेना है, huh?",
+        "label":  "add"
+    },
+    {
+        "text":  "टमाटर 2 kg जरूर लूंगी, yaar!",
+        "label":  "add"
+    },
+    {
+        "text":  "कुछ बादाम एक बड़ी कटोरी में, please.",
+        "label":  "add"
+    },
+    {
+        "text":  "शाक पांच रायां और एक टमाटर, thank you?",
+        "label":  "add"
+    },
+    {
+        "text":  "घर के लिए कपड़े चार यूनिट चाहिए, huh?",
+        "label":  "add"
+    },
+    {
+        "text":  "प्याज 3 रायां है, yaar?",
+        "label":  "add"
+    },
+    {
+        "text":  "लहसुन दो कटोरिया, please.",
+        "label":  "add"
+    },
+    {
+        "text":  "जल्दी से सेब तीन बोतलें लेना है!",
+        "label":  "add"
+    },
+    {
+        "text":  "टमाटर दो कप थोड़ा चटनी, okay?",
+        "label":  "add"
+    },
+    {
+        "text":  "चिकन 2 किग्रा जरूर खरीदूंगा, yaar?",
+        "label":  "add"
+    },
+    {
+        "text":  "आज चाय एक पाउंड, please.",
+        "label":  "add"
+    },
+    {
+        "text":  "शिमला अदरक पांच रायां, thank you?",
+        "label":  "add"
+    },
+    {
+        "text":  "डोरसेट आठ बोतलें, huh?",
+        "label":  "add"
+    },
+    {
+        "text":  "बीन्स 3 कटोरी, please!",
+        "label":  "add"
+    },
+    {
+        "text":  "फ्रूट्स तीन रायां के साथ चमेली लेंगे, yaar?",
+        "label":  "add"
+    },
+    {
+        "text":  "ஜே அச்டை",
+        "label":  "add"
+    },
+    {
+        "text":  "தணியும் ஆறி உங்கு என்று போல",
+        "label":  "add"
+    },
+    {
+        "text":  "நான் 3 கிருவி இருப்பேன்",
+        "label":  "add"
+    },
+    {
+        "text":  "தூயிளை உங்கு மீண்டும்",
+        "label":  "add"
+    },
+    {
+        "text":  "எப்ஸ்டிறான் 2 வெல்வி சேராது",
+        "label":  "add"
+    },
+    {
+        "text":  "நாள் அங்களுக்கு உண்மை போல",
+        "label":  "add"
+    },
+    {
+        "text":  "எனினும் 5 மயக்கர்சி",
+        "label":  "add"
+    },
+    {
+        "text":  "ஜே, பொது விடா",
+        "label":  "add"
+    },
+    {
+        "text":  "நீ உங்களுக்கு ஒற்ப்பில் 1 க்கழகம்",
+        "label":  "add"
+    },
+    {
+        "text":  "எனது 4 ஆண்டு",
+        "label":  "add"
+    },
+    {
+        "text":  "ஜே, நாட்டி வாழியுள்ளது",
+        "label":  "add"
+    },
+    {
+        "text":  "பொது விரை உங்கு",
+        "label":  "add"
+    },
+    {
+        "text":  "என் 2 மணத்தில்",
+        "label":  "add"
+    },
+    {
+        "text":  "செறி அந்தால் ஏன்?",
+        "label":  "add"
+    },
+    {
+        "text":  "இதனை பொது கட்டும்",
+        "label":  "add"
+    },
+    {
+        "text":  "வழியும் 2 ஆண்டு",
+        "label":  "add"
+    },
+    {
+        "text":  "எந்தால் 3 ஒரு சி அறிவை",
+        "label":  "add"
+    },
+    {
+        "text":  "ஜே, பொதுதான் கீயம்?",
+        "label":  "add"
+    },
+    {
+        "text":  "இப்போது எழுந்து ஆட்டலாவித்து",
+        "label":  "add"
+    },
+    {
+        "text":  "3 ஆண்டு 2, சரி",
+        "label":  "add"
+    },
+    {
+        "text":  "ஜே அனையும் போகிறு",
+        "label":  "add"
+    },
+    {
+        "text":  "நாங்கள் 1 உண்மையுள்ளது",
+        "label":  "add"
+    },
+    {
+        "text":  "2 ஆட்சி, 4 ஒரு எழுப்பல்",
+        "label":  "add"
+    },
+    {
+        "text":  "ஏனவில் இருக்கு?",
+        "label":  "add"
+    },
+    {
+        "text":  "நீயை 3 தாள்மையில் உண்மை செய்யு",
+        "label":  "add"
+    },
+    {
+        "text":  "1 ஒடுப்பு, 2 விருக்கி",
+        "label":  "add"
+    },
+    {
+        "text":  "5 அன்று, இதனை ஏழையால் உண்மைச் செய்கைப் போட்டிரு",
+        "label":  "add"
+    },
+    {
+        "text":  "2 ஓளி, 3 தனியும்",
+        "label":  "add"
+    },
+    {
+        "text":  "నే వైబ్: 2 kg",
+        "label":  "add"
+    },
+    {
+        "text":  "అతి పెలుగు: 3 bottlêr",
+        "label":  "add"
+    },
+    {
+        "text":  "కొదరు, మీ హాలో చేస్తున్న ఏం?",
+        "label":  "add"
+    },
+    {
+        "text":  "యారు అపైన్ల వెళుకుట్టే జీవితముగా చేసుకోండి?",
+        "label":  "add"
+    },
+    {
+        "text":  "హృదయం: 5 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "అన్నీ పెలుగుతున్న చట్టమే విష్ణోసహారొక్కం: 4 bottlêr",
+        "label":  "add"
+    },
+    {
+        "text":  "అపైను జలీతగా చేసి వెళ్లేది, రోడొ యంటే కథ పైనుతున్నాగా?",
+        "label":  "add"
+    },
+    {
+        "text":  "హృదయము: 6 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "ఎలా, వీ అర్ధ పేరో? తూళ ఆస్టైన్ చేయడం: 5 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "జా, వీ ముఖ్యమొక్క పృశ్న అద్భుతరించేలా? సబహ్య: 4 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "ఈ మొక్క పోషన్ను, ఉంటున్నాది? సబహ్య: 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "మీ రచకాలోనే, అపైన్ల వెళుకుట్టే ఎందుగా యిత్తరమే? 3 bottlêr",
+        "label":  "add"
+    },
+    {
+        "text":  "జా, అపైను చేస్తున్నవాళో యిథిర కలమొక్క గూడుపైన్: 4 bottlêr",
+        "label":  "add"
+    },
+    {
+        "text":  "ఆ, జీవతాలయదా ఇస్తిరో? మొక్క అపైను: 5 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "హృదయం, గౌరవాల్లో ఎడ్టీ చేసి వెళ్లుకున్నాయి. 3 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "మీ రచకాలోనే, పృశ్నం వస్తున్నాది? అదొక్కా: 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "మీ రచకాలోనే, పృశ్నం వస్తున్నాది? అగా: 3 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "ఆక జా, మీ రచకాలోనే, పృశ్నం వస్తున్నాది? 5 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "హృదయం: ఒక జలభరేపడమైన అట్టి, ఉంటున్నాగా 3 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "వదరబ్యం: కొత్త పశ్చిమ ఆస్టైను, అడుగే 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "ఒక రాజీ: ఉంబల పోషన్ను, ఏమైనది? 5 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "హృదయం: వెక్టీ చాలాశేరడ సప్తగుణ ఒక 4 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "మొఖ పద: 2 kg అని, ఈ జంటల వేళ్లా? ఏమో?",
+        "label":  "add"
+    },
+    {
+        "text":  "హృదయం: ఎడిగొత్త పష్ణ, అధర చట్టను 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "మీ కోస్త: ఉంది ఒక ఏవరా? ఇడి, ఈ అపైన్ బౌట 3 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "హృదయం: జీవతాలయదా రోకర సమిపు, అన్నా 4 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "ఈ రచకాలోనే, ఉంగడి వద్దయ్: జల పెలుగుతున్న 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "ఎటీ శరీర: అమేష, సొందోవికాలు ఉండవచ్ఛను 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "జా, భయపెట్టడే? మీ హాలో కద్గ ఎంబతి: 4 bottles",
+        "label":  "add"
+    },
+    {
+        "text":  "నవు ఈ అరొక్క పెడి, మీ సాహయం? ఏం?",
+        "label":  "add"
+    },
+    {
+        "text":  "లేదు: 2 kg బౌట 3 bottlêr",
+        "label":  "add"
+    },
+    {
+        "text":  "వరతి కళగా అభిప్యం, ఆస్టైనలు: ఇచ్ఛి 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "హృదయము: ఎరడానికి, అపైను 1 bottlêr లింగిస్తాళ్ళాయి",
+        "label":  "add"
+    },
+    {
+        "text":  "ఇది ఒడు: ఆరంభకాల అపైన్ బౌట 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "జగ్గతి, మీ సాహయం: ఇడి ఏరు: 5 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "నవు: అపైను చేసి ఎల్కీ, ఆహారంగణత మొదటి 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "బధై: 3 bottlêr వేళ్లా? యథేర్వ సంగీతము పొంది కోట్ల 2 bottlêr",
+        "label":  "add"
+    },
+    {
+        "text":  "నిర్భయాలు: అచ్చర, ఇడి 3 kôl జల పెలుగు చేసుకోవైనటీ ఉంది",
+        "label":  "add"
+    },
+    {
+        "text":  "మొత: 2 kg బౌట, ఏర్ప్రడి ఎగెల్సాయి? ఈ పోషన్ చేశవు?",
+        "label":  "add"
+    },
+    {
+        "text":  "ఒక: 3 bottlêr ఉంది, అమొడీ 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "ఆరా: ఈ పోషన్ చేయవలస్తున్నటీ, ఎంబది? 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "మా: ఈ పోషన్ చేయవలస్తున్నటీ, ఎంబది? 3 bottlêr",
+        "label":  "add"
+    },
+    {
+        "text":  "మా: ఈ పోషన్ చేయవలస్తున్నటీ, ఎంబది? 4 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "మా: ఈ పోషన్ చేయవలస్తున్నటీ, ఎంబది? 5 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "మా: ఈ పోషన్ చేయవలస్తున్నటీ, ఎంబది? 2 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "మా: ఈ పోషన్ చేయవలస్తున్నటీ, ఎంబది? 3 bottlêr",
+        "label":  "add"
+    },
+    {
+        "text":  "మా: ఈ పోషన్ చేయవలస్తున్నటీ, ఎంబది? 4 kôl",
+        "label":  "add"
+    },
+    {
+        "text":  "ಕೊಟ್ಟು ಸಿಂಹಾಳನೀಯರೆಗೆ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಜೋಡಬೇದ 3 ವಿಧೆಯಲ್ಲೆ ಒಳ್ಳೆಟ್ಟು ಹಾಗೂ 2 ಕಡಿತೆ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಉಸೇರಿನ ಬೋದೀಯಲ್ಲಿ ಒಳ್ಳೆಟು ಮಾತ್ರ 2 ಕ್ಷಣವೂ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೊಸರ ಬಗನಡದೋವಲೀಯ ಮೇಲೆ ಒಳ್ಳೆಟು 2 ಕ್ಷಣ ಅಂತರ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಜಾಸೊ ಬಗನಡೋದು ಪಾಚೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹತ್ಮವನ್ನೂ ಸರುಭಾಗ ಜೈಬಿದೀಯಲ್ಲಿ ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹತ್ಮವನ್ನೂ ಸರುಭಾಗ ಪಂದ-ರಾಜಿಯಲ್ಲಿ ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹತ್ಮವನ್ನೂ ಸರುಭಾಗ ಎಪೊಲಿಯಲ್ಲಿ ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಬದಿನ ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಬದಿನ ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ಹೈರ್ಸನ್ನೂ ಪಾತಗೀಯಿಲ್ಲ, ಒಳ್ಳೆಟು 2 ಕ್ಷಣ",
+        "label":  "add"
+    },
+    {
+        "text":  "ഇത് നീക്കുക",
+        "label":  "add"
+    },
+    {
+        "text":  "അല്പാം രച്യിക്കുക",
+        "label":  "add"
+    },
+    {
+        "text":  "എദർമെവ് ചോട്ടേറ്റുക",
+        "label":  "add"
+    },
+    {
+        "text":  "നീ ഒപ്പല്‍ അഭ്യസര്‍ തിളർതും",
+        "label":  "add"
+    },
+    {
+        "text":  "എമ്മോട് ഈ ആഹേറിക്കാന്‍",
+        "label":  "add"
+    },
+    {
+        "text":  "ഉച്ഛി പരിഗണ്യത്തൊഴുത്തിക്കും",
+        "label":  "add"
+    },
+    {
+        "text":  "അടിസർ, ഇന്ത് വാള്‍",
+        "label":  "add"
+    },
+    {
+        "text":  "മെല്‍യിറ്റണ്‍",
+        "label":  "add"
+    },
+    {
+        "text":  "ഈ പുരോഗകയുടെ സംഭാവനത്തിന്‌ അബ്ധിച്ചമേ",
+        "label":  "add"
+    },
+    {
+        "text":  "ഏറും പോക്കിയിരിക്കും",
+        "label":  "add"
+    },
+    {
+        "text":  "ആസ്ലീവ്, കളിശന്‍ ചേറ്റുക",
+        "label":  "add"
+    },
+    {
+        "text":  "ഒടാപോർ, എമ്മോട്",
+        "label":  "add"
+    },
+    {
+        "text":  "ആവെല്‍യൻ, അതുന്ന് ചേരിക്കും",
+        "label":  "add"
+    },
+    {
+        "text":  "പഞ്ജീബ്, ഉളസിറ്റാട് വണ്ണെയൊഴുതിക്കുമ്‍",
+        "label":  "add"
+    },
+    {
+        "text":  "ഒപ്പല്‍ എന്ന്, അദക്കാരുള്ളവും",
+        "label":  "add"
+    },
+    {
+        "text":  "ഇടയിൽ, സമ്പത്തികയാണ്",
+        "label":  "add"
+    },
+    {
+        "text":  "ആരൈന്‍ എല്‍ ഹള്ളുവും, ഇത് ഈ സ്ഥാപനിക്കാന്‍",
+        "label":  "add"
+    },
+    {
+        "text":  "അടിസർ, എമ്മോട്, ഒളിവയും",
+        "label":  "add"
+    },
+    {
+        "text":  "ഇലങ്ങില്‍, ഏറുക്ക്",
+        "label":  "add"
+    },
+    {
+        "text":  "തീരിച്ച, സംഭാഗത്തിന്മേയ്",
+        "label":  "add"
+    },
+    {
+        "text":  "ഇരെയിലോ, ഒപ്പല്‍ അടികള്ളില്‍",
+        "label":  "add"
+    },
+    {
+        "text":  "എവാർക്ക്, തിണ്‌ മീന്‍ ചേരിക്കും",
+        "label":  "add"
+    },
+    {
+        "text":  "അധിർക്ഷയിൽ, ഈ പോറെടുത്താല്‍",
+        "label":  "add"
+    },
+    {
+        "text":  "നമ്മ് ഏകദളം, ഇരുവധീയങ്ങളില്‍",
+        "label":  "add"
+    },
+    {
+        "text":  "ആസ്ബോഷണത്തിന്‌ ചൃദ്ധമാക്കം",
+        "label":  "add"
+    },
+    {
+        "text":  "ഇടയിൽ, ഈ അവാരില്‍",
+        "label":  "add"
+    },
+    {
+        "text":  "എപ്പോർ, ഒപ്പല്‍, ഏറുകളൊന്നും",
+        "label":  "add"
+    },
+    {
+        "text":  "ગેંદો બનાઈ કો શિષ્ટમાં આવું",
+        "label":  "add"
+    },
+    {
+        "text":  "હરડી સલય અથોને પદ્ધતિ કર્યા છે",
+        "label":  "add"
+    },
+    {
+        "text":  "ગુજરટમણો આવી શકે હઈં એમના પદ્ધતિ લો જો",
+        "label":  "add"
+    },
+    {
+        "text":  "ખૂડથી સૌરુભ અથોને હઈવા કો શિષ્ટમાં આવું",
+        "label":  "add"
+    },
+    {
+        "text":  "જોણળતા પેગસથી રઘેલ ચાને અથોને હઈવા કો શિષ્ટમાં આવું",
+        "label":  "add"
+    },
+    {
+        "text":  "ગતિ દયરથપરસની અઠળાઓ જ છે એક બીટલ ઉમ્ડો હઈવા કો શિષ્ટમાં આવું",
+        "label":  "add"
+    },
+    {
+        "text":  "ગીતરણ નથી અને સૌરુભમાં આજકપરિશચિહન દ્વારે એમનો બીટલ ઉમ્ડો અથોને કતમાં સભું ચૌ",
+        "label":  "add"
+    },
+    {
+        "text":  "જે વિદર્યો આવશે, પૂણી મટની 3 કોલ અથોને ચુકાડી ખર્ચાગળના તપસાય જો",
+        "label":  "add"
+    },
+    {
+        "text":  "વિદર્ય 5 લૂણ અથોને આએ, ક્ષમશુભ ઉપગાતો જી",
+        "label":  "add"
+    },
+    {
+        "text":  "હિંડરા 1 ટબ્લલ નથી અને એક મ૊ચયુવા દ્વારે તો જિઉં પ્રબૃહ ખેલી શો",
+        "label":  "add"
+    },
+    {
+        "text":  "સૌરુભ 5 ટકડી વાળી આદ્યતો પ્રધાન, અહે મૈં",
+        "label":  "add"
+    },
+    {
+        "text":  "શૃઙ્ખલ 2 કિટ્લ વિડી જુદ્દેળી રાતો ભયાથની હણી ખેલી શો",
+        "label":  "add"
+    },
+    {
+        "text":  "આપણા 2 કોડ્યિંગ અઠળતો મુસ્ત્રથી ખેલી શો",
+        "label":  "add"
+    },
+    {
+        "text":  "ભદ્રા 2 ટબ્લલ, હાયનું ઘેડતો અથોને છે એમના શીરી પદ્ધતિ લો જો",
+        "label":  "add"
+    },
+    {
+        "text":  "વસ્તબ 3 કોડ્યિંગ, હમારે એક ભીચુ ખેલી શો",
+        "label":  "add"
+    },
+    {
+        "text":  "પણ વસ્તબ 3 ક૊ટલ જ છે, અથોને ફૂર્યાડ આએ શો",
+        "label":  "add"
+    },
+    {
+        "text":  "ગણીચુ મૈં 2 કૌતૂલ જ છે, અથોને ભીર્વાસ શો",
+        "label":  "add"
+    },
+    {
+        "text":  "હિંડરા 1 ટબ્લલ એક ફૌજત અથોને આપીનું ઘેળું",
+        "label":  "add"
+    },
+    {
+        "text":  "વિદર્ય 2 ટેન, શૈલી બાણો જો",
+        "label":  "add"
+    },
+    {
+        "text":  "ચિત્ર ભગવાનમાં પદ્ધતિ 1 ટેન, આશકતી બુલો ચૈ",
+        "label":  "add"
+    },
+    {
+        "text":  "હરડથી સૌરુભ 3 માણ્ય વિજાળે, આપણું નિત્કર",
+        "label":  "add"
+    },
+    {
+        "text":  "ગેંદો સૈબડ 1 ટભલ ઉમ્ડો, જોઓછી ખેલી શો",
+        "label":  "add"
+    },
+    {
+        "text":  "કુતર્વ 2 ઘાસ નથી અને મૈં 3 ગહણબજુ ખેલા શો",
+        "label":  "add"
+    },
+    {
+        "text":  "પ૆ટ્રિયલ્ 1 છે, વડીન ભાષતી અથોને સુંદર",
+        "label":  "add"
+    },
+    {
+        "text":  "કૌણો હિંડરા 5 ટબ્લલ, ખેલી શો છે એમ જુદ્ધે ઉન્નાં",
+        "label":  "add"
+    },
+    {
+        "text":  "ગતિ 2 કવણી 3 ટબ્લલ, આપણા ચૌમક ખેલી શો",
+        "label":  "add"
+    },
+    {
+        "text":  "સૈબડ એનું ગ્રહ 1 ટભલ ઉમ્ડો, જોઓછી ખેલી શો",
+        "label":  "add"
+    },
+    {
+        "text":  "વેળા સૌરુભ 2 ઘાસ, પૂણી મટનથી કહીનું ચૈ",
+        "label":  "add"
+    },
+    {
+        "text":  "જોડગળ અધરતિ 2 ઘાસ, ફ્યઝણમાં ખેલી શો",
+        "label":  "add"
+    },
+    {
+        "text":  "I\u0027ll just put the apples back on the list.",
+        "label":  "remove"
+    },
+    {
+        "text":  "Can you remove the milk from my cart?",
+        "label":  "remove"
+    },
+    {
+        "text":  "I\u0027m taking the bread out now.",
+        "label":  "remove"
+    },
+    {
+        "text":  "Yaar, I think we need to get rid of the eggs.",
+        "label":  "remove"
+    },
+    {
+        "text":  "The rice is not necessary today, yaar. Let\u0027s take it off.",
+        "label":  "remove"
+    },
+    {
+        "text":  "We should eradicate the cheese from our shopping list!",
+        "label":  "remove"
+    },
+    {
+        "text":  "The bottle of ketchup has been removed.",
+        "label":  "remove"
+    },
+    {
+        "text":  "It\u0027s a moondru, but I\u0027m removing it anyway.",
+        "label":  "remove"
+    },
+    {
+        "text":  "I don\u0027t need char more, so let\u0027s get rid of that.",
+        "label":  "remove"
+    },
+    {
+        "text":  "Yaar, we can skip the 2 kg basmati rice today.",
+        "label":  "remove"
+    },
+    {
+        "text":  "The 3 bottles of orange juice are not needed, yaar.",
+        "label":  "remove"
+    },
+    {
+        "text":  "Let\u0027s remove the ghee from our list now.",
+        "label":  "remove"
+    },
+    {
+        "text":  "I want to eradicate the chana dal from my cart.",
+        "label":  "remove"
+    },
+    {
+        "text":  "We should take out the 5 cans of beans from our shopping list.",
+        "label":  "remove"
+    },
+    {
+        "text":  "Yaar, we can get rid of the milk this week instead.",
+        "label":  "remove"
+    },
+    {
+        "text":  "The bottle of olive oil has been taken off.",
+        "label":  "remove"
+    },
+    {
+        "text":  "Let\u0027s remove the 2 kg chicken powder today.",
+        "label":  "remove"
+    },
+    {
+        "text":  "The packet of cookies is not needed, yaar. We\u0027ll skip it.",
+        "label":  "remove"
+    },
+    {
+        "text":  "I want to eradicate the potato from my shopping list.",
+        "label":  "remove"
+    },
+    {
+        "text":  "We should take out the 4 cans of corn kernels from our cart.",
+        "label":  "remove"
+    },
+    {
+        "text":  "Yaar, let\u0027s get rid of the chappati flour this week instead.",
+        "label":  "remove"
+    },
+    {
+        "text":  "The bottle of soya milk has been removed.",
+        "label":  "remove"
+    },
+    {
+        "text":  "Let\u0027s remove the 3 kg sugar from our grocery list.",
+        "label":  "remove"
+    },
+    {
+        "text":  "I don\u0027t need char more, yaar. Let\u0027s take it off.",
+        "label":  "remove"
+    },
+    {
+        "text":  "The packet of ghee has been erased from my cart.",
+        "label":  "remove"
+    },
+    {
+        "text":  "Yaar, we can skip the 2 bottles of oil this week.",
+        "label":  "remove"
+    },
+    {
+        "text":  "I want to eradicate the flour from my shopping list.",
+        "label":  "remove"
+    },
+    {
+        "text":  "Let\u0027s remove the bottle of lemon juice today.",
+        "label":  "remove"
+    },
+    {
+        "text":  "The box of noodles is not necessary, yaar. We\u0027ll take it off.",
+        "label":  "remove"
+    },
+    {
+        "text":  "मैं यार, इसे घर में डालूँगा।",
+        "label":  "remove"
+    },
+    {
+        "text":  "क्या हो अगर मैं चुन लूँ?",
+        "label":  "remove"
+    },
+    {
+        "text":  "इसकी तारीख आ गई, ना?",
+        "label":  "remove"
+    },
+    {
+        "text":  "एक साल पुराना, बिकना चाहिए।",
+        "label":  "remove"
+    },
+    {
+        "text":  "यार, कल रात 10 बजे आ जाए।",
+        "label":  "remove"
+    },
+    {
+        "text":  "देखो, यह भी खरीद कर रख दो।",
+        "label":  "remove"
+    },
+    {
+        "text":  "अगर मैं इसे आज ही लेकर घर चलूँगा।",
+        "label":  "remove"
+    },
+    {
+        "text":  "यह क्या है, यार? बिक जाएगी।",
+        "label":  "remove"
+    },
+    {
+        "text":  "एक किलो पानी, चाय बनाने में है।",
+        "label":  "remove"
+    },
+    {
+        "text":  "यहां, तू जाकर स्टोर पर खपवा दे।",
+        "label":  "remove"
+    },
+    {
+        "text":  "इसकी क्वांटिटी थोड़ी कम हुई।",
+        "label":  "remove"
+    },
+    {
+        "text":  "क्यों नहीं लेते, यह 3 बोतल है।",
+        "label":  "remove"
+    },
+    {
+        "text":  "एक कप चाय पिलाने में रेडू कार्डमामेंस लग जाता।",
+        "label":  "remove"
+    },
+    {
+        "text":  "चलो, तेरा रिसिप्ट भी ले जाएँगे।",
+        "label":  "remove"
+    },
+    {
+        "text":  "बिक जाएगी, यार। हम यहाँ से बाहर निकल सकते हैं।",
+        "label":  "remove"
+    },
+    {
+        "text":  "आज तो बस थोड़े से चीजों की खरीद करेंगे।",
+        "label":  "remove"
+    },
+    {
+        "text":  "इसकी एक झोली में, रख दो।",
+        "label":  "remove"
+    },
+    {
+        "text":  "मुझे 1 किलो, ठीक-ठीक इतना है।",
+        "label":  "remove"
+    },
+    {
+        "text":  "चला, अब बाकी ऑर्डर लें।",
+        "label":  "remove"
+    },
+    {
+        "text":  "यही तो चाहते थे, ना?",
+        "label":  "remove"
+    },
+    {
+        "text":  "उफ्फ, यह फ्रिज में स्टोर कर दो।",
+        "label":  "remove"
+    },
+    {
+        "text":  "मुझसे 2 किलो यूरेनियम चाहिए।",
+        "label":  "remove"
+    },
+    {
+        "text":  "आज ही लेकर आ जाएँगे।",
+        "label":  "remove"
+    },
+    {
+        "text":  "इसको 1 बार उठाना चाहता हूँ ना।",
+        "label":  "remove"
+    },
+    {
+        "text":  "यही सही है, तू चुन सकता है।",
+        "label":  "remove"
+    },
+    {
+        "text":  "क्यों नहीं, इसे खपवा देते, ना?",
+        "label":  "remove"
+    },
+    {
+        "text":  "आज से यहां, मैंने पहले ही 1 किलो लिया, ना?",
+        "label":  "remove"
+    },
+    {
+        "text":  "நிச்சர் வேண்டும்",
+        "label":  "remove"
+    },
+    {
+        "text":  "எனி போய்க் ஏற்றா",
+        "label":  "remove"
+    },
+    {
+        "text":  "எங்களுடன் தலைந்தை சென்று விழும்",
+        "label":  "remove"
+    },
+    {
+        "text":  "ஒருமுறை போய்க்",
+        "label":  "remove"
+    },
+    {
+        "text":  "என்னை அளி இடதில்",
+        "label":  "remove"
+    },
+    {
+        "text":  "நாம் செய்வொழில்",
+        "label":  "remove"
+    },
+    {
+        "text":  "ஒரு நாள் போற்றம்",
+        "label":  "remove"
+    },
+    {
+        "text":  "உங்கள் இன்தி எழும்புவை",
+        "label":  "remove"
+    },
+    {
+        "text":  "அது செய்யும்",
+        "label":  "remove"
+    },
+    {
+        "text":  "எரிடு",
+        "label":  "remove"
+    },
+    {
+        "text":  "ஏற்றா?",
+        "label":  "remove"
+    },
+    {
+        "text":  "2 கண் சொல்லி",
+        "label":  "remove"
+    },
+    {
+        "text":  "இதோ விடா!",
+        "label":  "remove"
+    },
+    {
+        "text":  "3 பஞ்சு பெயர்",
+        "label":  "remove"
+    },
+    {
+        "text":  "என்னை ஒளி",
+        "label":  "remove"
+    },
+    {
+        "text":  "உங்கள் அறுமை",
+        "label":  "remove"
+    },
+    {
+        "text":  "1 தொழில்",
+        "label":  "remove"
+    },
+    {
+        "text":  "2 கண்",
+        "label":  "remove"
+    },
+    {
+        "text":  "3 பஞ்சு",
+        "label":  "remove"
+    },
+    {
+        "text":  "நாடல்வை ஆக்கி",
+        "label":  "remove"
+    },
+    {
+        "text":  "என்னுள் இரு அறுமையின்",
+        "label":  "remove"
+    },
+    {
+        "text":  "2 தொழில்",
+        "label":  "remove"
+    },
+    {
+        "text":  "1 போச்சு",
+        "label":  "remove"
+    },
+    {
+        "text":  "3 நீட்டி",
+        "label":  "remove"
+    },
+    {
+        "text":  "ஒரு கண்",
+        "label":  "remove"
+    },
+    {
+        "text":  "4 விளாக்கு",
+        "label":  "remove"
+    },
+    {
+        "text":  "5 இறுதியின்",
+        "label":  "remove"
+    },
+    {
+        "text":  "6 ஆம்",
+        "label":  "remove"
+    },
+    {
+        "text":  "7 எரிசோப்டி",
+        "label":  "remove"
+    },
+    {
+        "text":  "8 அல்ஸ்ட்ரீஸ்",
+        "label":  "remove"
+    },
+    {
+        "text":  "9 நூவா",
+        "label":  "remove"
+    },
+    {
+        "text":  "10 உணு",
+        "label":  "remove"
+    },
+    {
+        "text":  "1 கண் ஒன்று",
+        "label":  "remove"
+    },
+    {
+        "text":  "2 தொழில் 3 பஞ்சு",
+        "label":  "remove"
+    },
+    {
+        "text":  "పెరుగుడ చలితం: అవసానికి మీరు ఇటి దళ్లయి.",
+        "label":  "remove"
+    },
+    {
+        "text":  "భవపట్టు చలితం: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఇటి ప్యాన్ చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి ఇటి చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "భవపట్టి చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ప్యాను చలిత: అవసానికి మీరు ఇటి గొడెదంది.",
+        "label":  "remove"
+    },
+    {
+        "text":  "ఏమిటి చలిత: అవసాని కొరోగైనదా ఉండంది.",
+        "label":  "remove"
+    }
+]
