@@ -25,37 +25,37 @@ export const VariantModal: React.FC = () => {
 
   return (
     <AnimatePresence>
-      <div className="modal-backdrop" onClick={closeModal}>
+      <div className="overlay" style={{ zIndex: 110 }} onClick={closeModal}>
+        <div style={{ flex: 1 }}></div>
         <motion.div 
-          className="modal-content"
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
+          className="bottom-sheet"
+          initial={{ y: '100%' }}
+          animate={{ y: 0 }}
+          exit={{ y: '100%' }}
           transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="modal-header">
-            <h3 style={{ textTransform: 'capitalize' }}>Which {genericName}?</h3>
-            <button className="icon-btn" onClick={closeModal}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
+            <h3 style={{ textTransform: 'capitalize', fontSize: 20, margin: 0 }}>Which {genericName}?</h3>
+            <button className="icon-btn" onClick={closeModal} style={{ background: 'none', border: 'none' }}>
               <span className="material-symbols-outlined">close</span>
             </button>
           </div>
           
-          <div className="modal-body" style={{ maxHeight: '60vh', overflowY: 'auto' }}>
-            <p style={{ color: 'var(--md-sys-color-on-surface-variant)', marginBottom: 16 }}>
+          <div style={{ maxHeight: '60vh', overflowY: 'auto' }}>
+            <p style={{ color: 'var(--md-sys-color-on-surface-variant)', marginBottom: 16, marginTop: 0 }}>
               Multiple brand variants found. Please select one:
             </p>
             
-            <div className="substitute-list" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {options.map((option, idx) => (
                 <div 
                   key={idx}
-                  className="substitute-item"
                   onClick={() => handleSelect(option)}
                   style={{
                     padding: 16,
-                    border: '1px solid rgba(0,0,0,0.08)',
-                    borderRadius: 16,
+                    border: '1px solid var(--md-sys-color-outline)',
+                    borderRadius: 12,
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
