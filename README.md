@@ -12,11 +12,11 @@ Voice Cart is a fully voice-activated, multilingual shopping list manager design
 Our primary goal was to create an ultra-fast, offline-capable voice assistant that doesn't rely entirely on slow, expensive LLM API calls for every user interaction. 
 
 To achieve this, we engineered a robust, multi-stage Local NLP Pipeline running entirely in the browser. When a user speaks a command, the pipeline:
-1. Segments the speech using multilingual conjunctions.
-2. Extracts Entities using highly-optimized regex and canonical unit mapping.
-3. Resolves Items against a multi-language food dictionary (supporting English, Hindi, Tamil, Telugu, etc.).
+1. Segments the speech using multilingual conjunctions (e.g. "and", "aur", "mattu").
+2. Extracts Entities using a highly-optimized, **word-order agnostic** algorithm that perfectly parses combinations like `Quantity-Unit-Item` ("2 kg onion") or `Item-Quantity-Unit` ("water 1 bottle") without strict syntax rules.
+3. Resolves Items against a multi-language food dictionary (supporting English, Hindi, Tamil, Telugu, etc., including native Devanagari script support for offline parsing).
 
-This local approach delivers zero-latency intent classification and entity extraction. As a safety net, if the user speaks in complex non-Latin scripts (like Devanagari) or constructs highly unusual phrasing that drops below our confidence threshold, the system intelligently fails over to an LLM API Fallback (Gemma) to parse the structured data. This hybrid approach guarantees both instant performance and maximum accuracy.
+This local approach delivers zero-latency intent classification and entity extraction. As a safety net, if the user constructs highly unusual phrasing that drops below our confidence threshold, the system intelligently fails over to an LLM API Fallback (Gemma) to parse the structured data. This hybrid approach guarantees both instant performance and maximum accuracy.
 
 ### Architecture Flow
 
