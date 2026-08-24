@@ -33,7 +33,7 @@ interface StoreState {
 
 export const useStore = create<StoreState>((set) => ({
   cart: [],
-  language: 'hi-IN',
+  language: 'en-IN',
   listeningState: 'idle',
   transcript: '',
   suggestions: [],
