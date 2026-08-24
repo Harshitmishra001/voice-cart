@@ -33,7 +33,8 @@ export interface ExtractedEntity {
 }
 
 export function parseSegment(segment: string): ExtractedEntity[] {
-  const tokens = segment.toLowerCase().trim().split(/\s+/);
+  // Strip punctuation before splitting to ensure exact dictionary matches work
+  const tokens = segment.toLowerCase().replace(/[.,?!]/g, '').trim().split(/\s+/);
   
   const items: ExtractedEntity[] = [];
   
