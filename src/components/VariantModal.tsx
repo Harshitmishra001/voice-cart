@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { useStore } from '../store/useStore';
 import { useShoppingList } from '../hooks/useShoppingList';
 import { Product } from '../types';
@@ -24,17 +24,16 @@ export const VariantModal: React.FC = () => {
   };
 
   return (
-    <AnimatePresence>
-      <div className="overlay" style={{ zIndex: 110 }} onClick={closeModal}>
-        <div style={{ flex: 1 }}></div>
-        <motion.div 
-          className="bottom-sheet"
-          initial={{ y: '100%' }}
-          animate={{ y: 0 }}
-          exit={{ y: '100%' }}
-          transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
-          onClick={(e) => e.stopPropagation()}
-        >
+    <div className="overlay" style={{ zIndex: 110 }} onClick={closeModal}>
+      <div style={{ flex: 1 }}></div>
+      <motion.div 
+        className="bottom-sheet"
+        initial={{ y: '100%' }}
+        animate={{ y: 0 }}
+        exit={{ y: '100%' }}
+        transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
+        onClick={(e) => e.stopPropagation()}
+      >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
             <h3 style={{ textTransform: 'capitalize', fontSize: 20, margin: 0 }}>Which {genericName}?</h3>
             <button className="icon-btn" onClick={closeModal} style={{ background: 'none', border: 'none' }}>
@@ -92,6 +91,5 @@ export const VariantModal: React.FC = () => {
           </div>
         </motion.div>
       </div>
-    </AnimatePresence>
   );
 };
