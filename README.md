@@ -8,36 +8,34 @@ Voice Cart is a fully voice-activated, multilingual shopping list manager design
 
 ## The Approach (Technical Write-up)
 
-Our primary goal was to create an ultra-fast, offline-capable voice assistant that doesn't rely entirely on slow, expensive LLM API calls for every user interaction. 
+Our primary goal was to create an ultra-fast, offline-capable voice assistant that doesn't rely on slow, expensive Cloud LLM API calls for every user interaction. 
 
-To achieve this, we engineered a robust, multi-stage Local NLP Pipeline running entirely in the browser. When a user speaks a command, the pipeline:
-1. Segments the speech using multilingual conjunctions (e.g. "and", "aur", "mattu").
-2. Extracts Entities using a highly-optimized, **word-order agnostic** algorithm that perfectly parses combinations like `Quantity-Unit-Item` ("2 kg onion") or `Item-Quantity-Unit` ("water 1 bottle") without strict syntax rules.
-3. Resolves Items against a multi-language food dictionary (supporting English, Hindi, Tamil, Telugu, etc., including native Devanagari script support for offline parsing).
+To achieve this, we engineered a robust, multi-stage **Local NLP Pipeline & Semantic Search Engine** running entirely in the browser using WebAssembly. When a user speaks a command, the pipeline:
 
-This local approach delivers zero-latency intent classification and entity extraction. As a safety net, if the user constructs highly unusual phrasing that drops below our confidence threshold, the system intelligently fails over to an LLM API Fallback (Gemma) to parse the structured data. This hybrid approach guarantees both instant performance and maximum accuracy.
+1. **Segments and Extracts:** The text is parsed using a highly-optimized, **word-order agnostic** algorithm that perfectly extracts combinations like `Quantity-Unit-Item` ("2 kg onion") or `Item-Quantity-Unit` ("water 1 bottle") without strict syntax rules.
+2. **Local Feature Extraction:** We load a quantized `paraphrase-multilingual-MiniLM` transformer model directly in the browser via **Transformers.js**.
+3. **Semantic Matching via Cosine Similarity:** Instead of relying on exact string matches, the raw item name extracted from speech is converted into a high-dimensional vector. We then calculate the **Cosine Similarity** between this vector and our pre-computed product catalog embeddings. This allows the system to seamlessly snap fuzzy inputs (like "organic apples" or "colgate") to the correct database variant ("Apple" or "Colgate Toothpaste") even with typos, plurals, or missing adjectives.
+
+This local approach delivers zero-latency intent classification and semantic entity resolution without sending data to the cloud. (An LLM API acts strictly as an extreme-edge-case fallback and for generating out-of-stock substitute recommendations).
 
 ### Architecture Flow
 
 ```mermaid
 graph TD
     A[User Speech] --> B[Web Speech API STT]
-    B --> C{Script Detection}
+    B --> C[Local Intent & Regex Extraction]
     
-    C -->|Latin Script| D[Local NLP Pipeline]
-    C -->|Non-Latin Script| E[LLM Fallback API]
+    C --> D[Extract Raw Items & Quantities]
+    D --> E[Transformers.js Feature Extractor]
+    E -->|Generate Vector| F[Vector Embeddings Space]
     
-    D --> F[Segment by Conjunctions]
-    F --> G[Extract Quantities & Units]
-    G --> H[Multilingual Dictionary Lookup]
+    F --> G[Cosine Similarity Calculation]
+    G --> H{Similarity > Threshold?}
     
-    H --> I{Confidence Check}
-    I -->|High Confidence| J[Extracted Entities]
-    I -->|Low Confidence| E
+    H -->|Yes| I[Map to Exact Catalog Variant]
+    H -->|No| J[Add as Custom Item / Fetch Substitutes]
     
-    E --> J
-    
-    J --> K[Update Global State]
+    I --> K[Update Global State]
     K --> L[React UI Updates]
 ```
 
@@ -45,13 +43,12 @@ graph TD
 
 ## Features Implemented
 
-* Voice Command Recognition: Instantly parses commands like "Add 2 liters of milk".
-* Advanced NLP: Understands variations like "I want to buy bananas" vs "Add bananas to my list".
-* Multilingual Support: Understands items, numbers, and quantities spoken in English, Hindi, and several other regional languages.
-* Smart Suggestions & Substitutes: Uses AI to suggest complementary items based on your cart, and offers alternative products if an item is out of stock.
-* Smart List Management: Automatically categorizes items (Dairy, Produce, Snacks, etc.) and allows precise quantity modifications via voice ("change milk to 3 liters").
-* Voice-Activated Search: Ask the app to "find organic apples under 5 dollars" and it returns voice-filtered results.
-* Minimalist Adaptive UI: Clean, responsive UI with real-time visual feedback and native Web Share API support to easily export your list to WhatsApp/SMS.
+* **Voice Command Recognition:** Instantly parses commands like "Add 2 liters of milk".
+* **Semantic Product Disambiguation:** Uses vector embeddings to handle brand variations. If you ask for a generic item (e.g., "Add toothpaste"), it prompts you to select a specific brand (Colgate vs Sensodyne). If you specify a brand, it instantly maps via Cosine Similarity.
+* **Multilingual Support:** Understands items, numbers, and quantities spoken in English, Hindi, and several other regional languages using a local alias dictionary.
+* **Smart List Management:** Automatically categorizes items (Dairy, Produce, Snacks, etc.) and allows precise quantity modifications via voice ("change milk to 3 liters").
+* **Voice-Activated Search & Price Filters:** Ask the app to "find toothpaste under $5" or "under 50 rupees" and it processes the currency constraints instantly via local regex.
+* **Minimalist Adaptive UI:** Clean, responsive UI with real-time visual feedback and native Web Share API support to easily export your list to WhatsApp/SMS.
 
 ## Demo Screenshots
 
