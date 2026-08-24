@@ -1,13 +1,10 @@
 # Voice Cart - Voice Command Shopping Assistant
 
-<p align="center">
-  <img src="public/screenshots/screenshot_cart.png" width="45%" />
-  <img src="public/screenshots/screenshot_listening.png" width="45%" />
-</p>
-
 ### 🚀 **Live Demo:** [voice-cart-phi.vercel.app](https://voice-cart-phi.vercel.app/)
 
-Voice Cart is a fully voice-activated, multilingual shopping list manager designed for speed, privacy, and a seamless user experience. It leverages an advanced local NLP pipeline with an AI-powered fallback to understand complex shopping commands instantly.
+Voice Cart is a fully voice-activated, multilingual shopping list manager designed for speed, privacy, and a seamless user experience. It leverages an advanced local NLP pipeline with an AI-powered fallback to understand complex shopping commands instantly. 
+
+**✨ Fully Responsive**: Voice Cart features a beautiful, adaptive UI that supports both laptop and mobile dimensions natively. It automatically transforms from a mobile app experience into a spacious 2-column dashboard on larger screens.
 
 ## The Approach (Technical Write-up)
 
@@ -54,7 +51,17 @@ graph TD
 * Smart Suggestions & Substitutes: Uses AI to suggest complementary items based on your cart, and offers alternative products if an item is out of stock.
 * Smart List Management: Automatically categorizes items (Dairy, Produce, Snacks, etc.) and allows precise quantity modifications via voice ("change milk to 3 liters").
 * Voice-Activated Search: Ask the app to "find organic apples under 5 dollars" and it returns voice-filtered results.
-* Minimalist Mobile UI: Clean, responsive UI with real-time visual feedback and native Web Share API support to easily export your list to WhatsApp/SMS.
+* Minimalist Adaptive UI: Clean, responsive UI with real-time visual feedback and native Web Share API support to easily export your list to WhatsApp/SMS.
+
+## Demo Screenshots
+
+<p align="center">
+  <img src="docs/mobile-filled.png" width="30%" alt="Mobile Interface" />
+  <img src="docs/desktop-filled.png" width="65%" alt="Desktop Interface" />
+</p>
+<p align="center">
+  <img src="docs/desktop-empty.png" width="80%" alt="Empty State Desktop" />
+</p>
 
 ## Tech Stack
 
