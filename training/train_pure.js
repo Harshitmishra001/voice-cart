@@ -37,8 +37,10 @@ async function main() {
 
   console.log('Building model...');
   const model = tf.sequential();
-  model.add(tf.layers.dense({ inputShape: [384], units: 128, activation: 'relu' }));
-  model.add(tf.layers.dense({ units: 64, activation: 'relu' }));
+  model.add(tf.layers.dense({ inputShape: [384], units: 128, activation: 'relu', kernelRegularizer: tf.regularizers.l2({ l2: 0.001 }) }));
+  model.add(tf.layers.dropout({ rate: 0.4 }));
+  model.add(tf.layers.dense({ units: 64, activation: 'relu', kernelRegularizer: tf.regularizers.l2({ l2: 0.001 }) }));
+  model.add(tf.layers.dropout({ rate: 0.3 }));
   model.add(tf.layers.dense({ units: INTENT_LABELS.length, activation: 'softmax' }));
 
   model.compile({
@@ -50,10 +52,10 @@ async function main() {
   console.log('Training model...');
   await model.fit(xs, ys, {
     epochs: 40,
-    batchSize: 32,
-    validationSplit: 0.15,
+    batchSize: 64,
+    validationSplit: 0.2,
     callbacks: {
-      onEpochEnd: (epoch, logs) => console.log(`Epoch ${epoch + 1}: loss = ${logs.loss.toFixed(4)}, acc = ${logs.acc.toFixed(4)}`)
+      onEpochEnd: (epoch, logs) => console.log(`Epoch ${epoch + 1}: loss = ${logs.loss.toFixed(4)}, acc = ${logs.acc.toFixed(4)}, val_acc = ${logs.val_acc.toFixed(4)}`)
     }
   });
 
