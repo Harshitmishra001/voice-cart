@@ -64,7 +64,6 @@ function App() {
   }
 
   return (
-  return (
     <div className="app-layout">
       {/* Left Panel: Header, Mic, and Empty State on Desktop */}
       <div className="left-panel">
