@@ -22,6 +22,11 @@ export function setApiKey(key: string): void {
 }
 
 function stripCodeBlocks(text: string): string {
+  const start = text.indexOf('[');
+  const end = text.lastIndexOf(']');
+  if (start !== -1 && end !== -1 && end > start) {
+    return text.substring(start, end + 1);
+  }
   return text
     .replace(/```json\s*/gi, '')
     .replace(/```\s*/g, '')
