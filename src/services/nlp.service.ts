@@ -43,27 +43,39 @@ function hasNonLatinScript(text: string): boolean {
 
 export async function initModels(): Promise<boolean> {
   try {
-    const { pipeline } = await import('@xenova/transformers');
-    featureExtractor = await pipeline(
-      'feature-extraction',
-      'Xenova/paraphrase-multilingual-MiniLM-L12-v2',
-      { quantized: true }
+    const initPromise = async () => {
+      const transformers = await import('@xenova/transformers');
+      transformers.env.backends.onnx.wasm.numThreads = 1;
+      
+      featureExtractor = await transformers.pipeline(
+        'feature-extraction',
+        'Xenova/paraphrase-multilingual-MiniLM-L12-v2',
+        { quantized: true }
+      );
+
+      try {
+        const response = await fetch('/model/weights.json');
+        rawWeights = await response.json();
+      } catch (e) {
+        console.warn('Weights not found, using regex fallback:', e);
+        rawWeights = null;
+      }
+      return true;
+    };
+
+    // Timeout after 8 seconds
+    const timeoutPromise = new Promise<boolean>((_, reject) => 
+      setTimeout(() => reject(new Error('Model loading timed out')), 8000)
     );
 
-    try {
-      const response = await fetch('/model/weights.json');
-      rawWeights = await response.json();
-    } catch (e) {
-      console.warn('Weights not found, using regex fallback:', e);
-      rawWeights = null;
-    }
+    await Promise.race([initPromise(), timeoutPromise]);
 
     modelsLoaded = true;
     return true;
   } catch (e) {
-    console.error('Failed to load MiniLM model:', e);
+    console.error('Failed to load MiniLM model, falling back to Regex:', e);
     modelLoadFailed = true;
-    modelsLoaded = true;
+    modelsLoaded = true; // Set to true to unblock UI
     return false;
   }
 }
