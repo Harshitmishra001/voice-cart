@@ -5,6 +5,8 @@
   <img src="public/screenshots/screenshot_listening.png" width="45%" />
 </p>
 
+### 🚀 **Live Demo:** [voice-cart-phi.vercel.app](https://voice-cart-phi.vercel.app/)
+
 Voice Cart is a fully voice-activated, multilingual shopping list manager designed for speed, privacy, and a seamless user experience. It leverages an advanced local NLP pipeline with an AI-powered fallback to understand complex shopping commands instantly.
 
 ## The Approach (Technical Write-up)
