@@ -137,10 +137,35 @@ export const CartScreen: React.FC = () => {
         </div>
       ))}
       
-      <div style={{ marginTop: 32, paddingTop: 16, borderTop: '1px solid var(--md-sys-color-outline)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span style={{ fontSize: 16, fontWeight: 500, color: 'var(--md-sys-color-on-surface-variant)' }}>Total Estimated</span>
-        <span style={{ fontSize: 24, fontWeight: 700, color: 'var(--md-sys-color-primary)' }}>₹{totalPrice}</span>
-      </div>
+      {totalPrice > 0 && (
+        <div 
+          className="slide-up"
+          style={{ 
+            position: 'fixed',
+            bottom: 104,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 'calc(100% - 40px)',
+            maxWidth: 440,
+            background: 'rgba(255,255,255,0.9)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            padding: '16px 24px',
+            borderRadius: 24,
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
+            border: '1px solid rgba(255,255,255,0.4)',
+            zIndex: 30
+          }}
+        >
+          <span style={{ fontSize: 15, fontWeight: 600, color: 'var(--md-sys-color-on-surface-variant)' }}>Total Estimated</span>
+          <span style={{ fontSize: 24, fontWeight: 800, color: 'var(--md-sys-color-primary)', letterSpacing: '-0.5px' }}>
+            ₹{totalPrice}
+          </span>
+        </div>
+      )}
     </div>
   );
 };
