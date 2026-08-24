@@ -6,7 +6,7 @@ export const isSupported = () => {
 
 export const startListening = (
   langCode: string,
-  onResult: (interim: string, final: string) => void,
+  onResult: (transcript: string, isFinal: boolean) => void,
   onEnd: () => void,
   onError: (error: string) => void
 ) => {
@@ -27,19 +27,25 @@ export const startListening = (
   recognition.interimResults = true;
 
   recognition.onresult = (event: any) => {
-    let interim = '';
-    let final = '';
+    let interimTranscript = '';
+    let finalTranscript = '';
 
     for (let i = event.resultIndex; i < event.results.length; i++) {
       const transcript = event.results[i][0].transcript;
       if (event.results[i].isFinal) {
-        final += transcript;
+        finalTranscript += transcript;
       } else {
-        interim += transcript;
+        interimTranscript += transcript;
       }
     }
     
-    onResult(interim, final);
+    if (finalTranscript) {
+      // Send the final recognized text
+      onResult(finalTranscript, true);
+    } else {
+      // Send interim (live preview) text
+      onResult(interimTranscript, false);
+    }
   };
 
   recognition.onerror = (event: any) => {

@@ -37,6 +37,8 @@ export const ListeningOverlay: React.FC<ListeningOverlayProps> = ({ onStop }) =>
             style={{ 
               position: 'absolute', 
               top: 28, 
+              left: '50%',
+              transform: 'translateX(-50%)',
               backgroundColor: listeningState === 'processing' ? 'var(--md-sys-color-surface-variant)' : 'var(--md-sys-color-error)',
               color: listeningState === 'processing' ? 'var(--md-sys-color-on-surface-variant)' : 'white'
             }}
