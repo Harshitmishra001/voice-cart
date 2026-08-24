@@ -87,7 +87,7 @@ function App() {
         )}
       </div>
 
-      {isSupported && !isListening && !isProcessing && (
+      {isSupported && !isListening && !isProcessing && !isLanguagePickerOpen && (
         <div className="fab-container">
           <button className="fab" onClick={toggleListening}>
             <span className="material-symbols-outlined">mic</span>
