@@ -466,60 +466,56 @@ button:active {
     align-items: center;
   }
   #root {
-    width: 900px;
+    width: 420px;
     max-width: 100%;
-    height: 700px;
-    max-height: 90vh;
+    height: 800px;
+    max-height: 95vh;
     margin: auto;
     border-radius: 32px;
     overflow: hidden;
     box-shadow: 0 32px 80px rgba(0,0,0,0.15);
+    position: relative;
   }
   .app-layout {
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
     overflow: hidden;
   }
   .left-panel {
-    flex: 0.8;
-    border-right: 1px solid rgba(0,0,0,0.05);
-    background: linear-gradient(180deg, #fbfdf7, #f0f4ea);
-    position: relative;
-    height: 100%;
+    display: contents;
   }
   .right-panel {
-    flex: 1.2;
-    background-color: #ffffff;
-    overflow-y: auto;
-    position: relative;
-    height: 100%;
+    display: contents;
   }
   .app-header {
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: none;
-    padding: 32px;
+    background: rgba(251, 253, 247, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 16px 20px;
   }
   .main-content {
-    padding: 32px;
-    padding-bottom: 40px;
-    overflow-y: visible;
+    padding: 20px;
+    padding-bottom: 120px;
   }
   .fab-container {
     position: absolute;
-    bottom: 64px;
+    bottom: 32px;
     left: 50%;
     transform: translateX(-50%);
   }
+  .toast-container {
+    position: absolute;
+    bottom: 100px;
+  }
   .fab {
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
   }
   .fab .material-symbols-outlined {
-    font-size: 40px;
+    font-size: 32px;
   }
   .empty-state {
-    padding-top: 20%;
+    padding-top: 30%;
   }
 }
