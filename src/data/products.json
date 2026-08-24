@@ -1150,5 +1150,421 @@
     "unit": "kg",
     "price": 100,
     "inStock": true
+  },
+  {
+    "id": "145",
+    "name": "Radish",
+    "category": "produce",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "146",
+    "name": "Beetroot",
+    "category": "produce",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "147",
+    "name": "Turnip",
+    "category": "produce",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "148",
+    "name": "Bitter Gourd",
+    "category": "produce",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "149",
+    "name": "Bottle Gourd",
+    "category": "produce",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "150",
+    "name": "Ridge Gourd",
+    "category": "produce",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "151",
+    "name": "Pumpkin",
+    "category": "produce",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "152",
+    "name": "French Beans",
+    "category": "produce",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "153",
+    "name": "Sweet Potato",
+    "category": "produce",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "154",
+    "name": "Mushroom",
+    "category": "produce",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "155",
+    "name": "Milk",
+    "category": "dairy",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "156",
+    "name": "Buttermilk",
+    "category": "dairy",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "157",
+    "name": "Lassi",
+    "category": "dairy",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "158",
+    "name": "Egg",
+    "category": "dairy",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "159",
+    "name": "Pen",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "160",
+    "name": "Pencil",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "161",
+    "name": "Notebook",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "162",
+    "name": "Eraser",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "163",
+    "name": "Sharpener",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "164",
+    "name": "Ruler",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "165",
+    "name": "Marker",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "166",
+    "name": "Highlighter",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "167",
+    "name": "Crayons",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "168",
+    "name": "Glue",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "169",
+    "name": "Tape",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "170",
+    "name": "Scissors",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "171",
+    "name": "Stapler",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "172",
+    "name": "Paper",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "173",
+    "name": "Files",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "174",
+    "name": "Folder",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "175",
+    "name": "Calculator",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "176",
+    "name": "Diary",
+    "category": "stationary",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "177",
+    "name": "Wheat",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "178",
+    "name": "Semolina",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "179",
+    "name": "Lentils",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "180",
+    "name": "Kidney Beans",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "181",
+    "name": "Chickpeas",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "182",
+    "name": "Poha",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "183",
+    "name": "Oats",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "184",
+    "name": "Jaggery",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "185",
+    "name": "Mustard Seeds",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "186",
+    "name": "Asafoetida",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "187",
+    "name": "Fenugreek",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "188",
+    "name": "Fennel",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "189",
+    "name": "Sesame",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "190",
+    "name": "Tamarind",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "191",
+    "name": "Washing Powder",
+    "category": "household",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "192",
+    "name": "Toilet Cleaner",
+    "category": "household",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "193",
+    "name": "Sponge",
+    "category": "household",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "194",
+    "name": "Broom",
+    "category": "household",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "195",
+    "name": "Mop",
+    "category": "household",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "196",
+    "name": "Room Freshener",
+    "category": "household",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
   }
 ]
