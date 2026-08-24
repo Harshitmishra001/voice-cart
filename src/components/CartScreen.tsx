@@ -1,5 +1,6 @@
 import React from 'react';
 import { useShoppingList } from '../hooks/useShoppingList';
+import { useStore } from '../store/useStore';
 
 const categoryEmoji: Record<string, string> = {
   dairy: '🥛',
@@ -15,20 +16,71 @@ const categoryEmoji: Record<string, string> = {
 
 export const CartScreen: React.FC = () => {
   const { groupedCart, updateQuantity, toggleComplete, clearCart, totalPrice, cartCount } = useShoppingList();
+  const showToast = useStore(s => s.showToast);
 
   if (cartCount === 0) return null;
+
+  const handleShare = async () => {
+    let text = '🛒 *My Voice Cart List*\n\n';
+    
+    Object.entries(groupedCart).forEach(([category, items]) => {
+      const icon = categoryEmoji[category] || '📦';
+      const title = category.charAt(0).toUpperCase() + category.slice(1).replace('_', ' ');
+      text += `${icon} *${title}*\n`;
+      items.forEach(item => {
+        const checkbox = item.completed ? '✅' : '⬜';
+        const qtyString = item.quantity === 1 && item.unit === 'pcs' ? '' : ` (${item.quantity} ${item.unit})`;
+        text += `${checkbox} ${item.name}${qtyString}\n`;
+      });
+      text += '\n';
+    });
+
+    if (totalPrice > 0) {
+      text += `*Total Estimated:* ₹${totalPrice}`;
+    }
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'My Shopping List',
+          text: text,
+        });
+      } catch (err) {
+        if ((err as Error).name !== 'AbortError') {
+          showToast('Failed to share list');
+        }
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast('List copied to clipboard!');
+      } catch {
+        showToast('Failed to copy list');
+      }
+    }
+  };
 
   return (
     <div className="cart-screen" style={{ paddingBottom: 64 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 600 }}>Your List ({cartCount})</h2>
-        <button 
-          onClick={clearCart}
-          className="text-primary"
-          style={{ fontSize: 14, fontWeight: 500 }}
-        >
-          Clear all
-        </button>
+        <div style={{ display: 'flex', gap: 16 }}>
+          <button 
+            onClick={handleShare}
+            className="text-primary"
+            style={{ fontSize: 14, fontWeight: 500, display: 'flex', alignItems: 'center', gap: 4 }}
+          >
+            <span className="material-symbols-outlined" style={{ fontSize: 16 }}>share</span>
+            Share
+          </button>
+          <button 
+            onClick={clearCart}
+            className="text-primary"
+            style={{ fontSize: 14, fontWeight: 500 }}
+          >
+            Clear all
+          </button>
+        </div>
       </div>
 
       {Object.entries(groupedCart).map(([category, items]) => (
