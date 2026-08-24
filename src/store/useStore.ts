@@ -28,6 +28,15 @@ interface StoreState {
   setSearchResults: (results: Product[]) => void;
   setLanguagePickerOpen: (open: boolean) => void;
   setSubstituteModal: (item: string | null, substitutes: string[]) => void;
+  
+  // Variant Modal
+  variantModalOpen: boolean;
+  variantGenericName: string;
+  variantOptions: Product[];
+  pendingVariantAdd: { quantity: number; unit: string } | null;
+  setVariantModal: (name: string, options: Product[], quantity: number, unit: string) => void;
+  closeVariantModal: () => void;
+
   setModelLoaded: (loaded: boolean) => void;
   showToast: (message: string) => void;
 }
@@ -102,6 +111,25 @@ export const useStore = create<StoreState>((set) => ({
       isSubstituteModalOpen: !!item,
       outOfStockItem: item,
       substitutes,
+    }),
+
+  variantModalOpen: false,
+  variantGenericName: '',
+  variantOptions: [],
+  pendingVariantAdd: null,
+  setVariantModal: (name, options, quantity, unit) =>
+    set({
+      variantModalOpen: true,
+      variantGenericName: name,
+      variantOptions: options,
+      pendingVariantAdd: { quantity, unit },
+    }),
+  closeVariantModal: () =>
+    set({
+      variantModalOpen: false,
+      variantGenericName: '',
+      variantOptions: [],
+      pendingVariantAdd: null,
     }),
 
   setModelLoaded: (loaded) => set({ modelLoaded: loaded }),

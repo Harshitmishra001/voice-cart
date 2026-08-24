@@ -352,30 +352,6 @@
     "inStock": true
   },
   {
-    "id": "45",
-    "name": "Toothpaste",
-    "category": "personal_care",
-    "unit": "pcs",
-    "price": 80,
-    "inStock": true
-  },
-  {
-    "id": "46",
-    "name": "Soap",
-    "category": "personal_care",
-    "unit": "pcs",
-    "price": 35,
-    "inStock": true
-  },
-  {
-    "id": "47",
-    "name": "Shampoo",
-    "category": "personal_care",
-    "unit": "pcs",
-    "price": 120,
-    "inStock": true
-  },
-  {
     "id": "48",
     "name": "Hand Wash",
     "category": "personal_care",
@@ -909,14 +885,6 @@
     "category": "personal_care",
     "unit": "bottle",
     "price": 250,
-    "inStock": true
-  },
-  {
-    "id": "115",
-    "name": "Face Wash",
-    "category": "personal_care",
-    "unit": "bottle",
-    "price": 180,
     "inStock": true
   },
   {
@@ -1565,6 +1533,86 @@
     "category": "household",
     "unit": "kg",
     "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "197",
+    "name": "Colgate Toothpaste",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "198",
+    "name": "Sensodyne Toothpaste",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 150,
+    "inStock": true
+  },
+  {
+    "id": "199",
+    "name": "Sunsilk Shampoo",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 120,
+    "inStock": true
+  },
+  {
+    "id": "200",
+    "name": "Head & Shoulders Shampoo",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 180,
+    "inStock": true
+  },
+  {
+    "id": "201",
+    "name": "Dove Soap",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 45,
+    "inStock": true
+  },
+  {
+    "id": "202",
+    "name": "Lifebuoy Soap",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 25,
+    "inStock": true
+  },
+  {
+    "id": "203",
+    "name": "Himalaya Face Wash",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 85,
+    "inStock": true
+  },
+  {
+    "id": "204",
+    "name": "Garnier Face Wash",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 120,
+    "inStock": true
+  },
+  {
+    "id": "205",
+    "name": "Nivea Body Lotion",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 250,
+    "inStock": true
+  },
+  {
+    "id": "206",
+    "name": "Vaseline Body Lotion",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 180,
     "inStock": true
   }
 ]

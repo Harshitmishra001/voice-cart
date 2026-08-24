@@ -14,6 +14,7 @@ import { EmptyCart } from './components/EmptyCart';
 import { LanguagePicker } from './components/LanguagePicker';
 import { ListeningOverlay } from './components/ListeningOverlay';
 import { SubstituteModal } from './components/SubstituteModal';
+import { VariantModal } from './components/VariantModal';
 import { VoiceSearchResults } from './components/VoiceSearchResults';
 import { ApiKeyPrompt } from './components/ApiKeyPrompt';
 import { Toast } from './components/Toast';

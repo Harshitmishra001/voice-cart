@@ -13,10 +13,26 @@ export function useShoppingList() {
   const showToast = useStore((s) => s.showToast);
 
   const addItemByName = (name: string, quantity: number = 1, unit: string = 'pcs') => {
-    // Find product in catalogue (case-insensitive)
-    const product = (products as Product[]).find(
-      (p) => p.name.toLowerCase() === name.toLowerCase()
-    );
+    const qName = name.toLowerCase().trim();
+    
+    // Find product in catalogue (case-insensitive exact match)
+    let product = (products as Product[]).find((p) => p.name.toLowerCase() === qName);
+    
+    // If not found, check if it's a generic request that has multiple branded variants
+    if (!product) {
+      const variants = (products as Product[]).filter(
+        (p) => p.name.toLowerCase().includes(qName) || p.category.toLowerCase() === qName
+      );
+      
+      if (variants.length > 1) {
+        // Trigger disambiguation modal
+        useStore.getState().setVariantModal(name, variants, quantity, unit);
+        return;
+      } else if (variants.length === 1) {
+        // Just one variant, use it
+        product = variants[0];
+      }
+    }
     
     if (product) {
       if (!product.inStock) {
@@ -25,7 +41,7 @@ export function useShoppingList() {
         return;
       }
       // Check if already in cart
-      const existing = cart.find((i) => i.name.toLowerCase() === product.name.toLowerCase());
+      const existing = cart.find((i) => i.name.toLowerCase() === product!.name.toLowerCase());
       if (existing) {
         updateQuantity(existing.id, existing.quantity + quantity);
         showToast(`${product.name} updated to ${existing.quantity + quantity} ${unit} ✓`);
@@ -41,7 +57,16 @@ export function useShoppingList() {
         showToast(`${product.name} (${quantity} ${unit}) added ✓`);
       }
     } else {
-      // Not in catalogue — add as custom item
+      // It's not in the catalog at all.
+      // If it looks like a specific brand name (e.g., > 2 words and not a known generic), we might treat it as out-of-stock.
+      // But for simplicity, we'll assume if it's not matched and has >= 2 words (like "pepsodent toothpaste"), 
+      // trigger the substitute modal. Otherwise, add as custom item.
+      if (qName.split(' ').length >= 2) {
+        useStore.getState().setSubstituteModal(name, []);
+        return;
+      }
+
+      // Add as custom item
       const cartItem: CartItem = {
         id: uuid(),
         name: name.charAt(0).toUpperCase() + name.slice(1),
