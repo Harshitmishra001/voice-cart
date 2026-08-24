@@ -1,6 +1,7 @@
 import type { ParsedIntent, ParsedMultiIntent } from '../types';
 import { INTENT_LABELS, CONFIDENCE_THRESHOLD } from '../constants';
 import { extractEntities } from './entityExtractor';
+import { extractEntitiesWithLLM } from './llm.service';
 
 let featureExtractor: any = null;
 let rawWeights: any = null;
@@ -30,6 +31,12 @@ function denseLayer(vec: number[], w: number[], b: number[], units: number) {
     out[i] = sum;
   }
   return out;
+}
+
+// --- Detect non-Latin scripts (Devanagari, Tamil, Telugu, etc.) ---
+function hasNonLatinScript(text: string): boolean {
+  // Matches Devanagari, Bengali, Tamil, Telugu, Kannada, Malayalam, Gujarati
+  return /[\u0900-\u0D7F]/.test(text);
 }
 
 // --- Model Loading ---
@@ -80,15 +87,10 @@ async function classifyWithModel(text: string): Promise<{ action: string; confid
     
     let vec = Array.from(output.data as Float32Array).slice(0, 384);
     
-    // Layer 1: 128 units, relu
     vec = denseLayer(vec, rawWeights.w1, rawWeights.b1, 128);
     vec = vec.map(relu);
-
-    // Layer 2: 64 units, relu
     vec = denseLayer(vec, rawWeights.w2, rawWeights.b2, 64);
     vec = vec.map(relu);
-
-    // Layer 3: 4 units, softmax
     vec = denseLayer(vec, rawWeights.w3, rawWeights.b3, 4);
     const probabilities = softmax(vec);
 
@@ -117,21 +119,29 @@ function classifyWithRegex(text: string): { action: string; confidence: number }
       /\b(remove|delete|hatao|hata\s*do|nikal|nikaal|cancel|discard)\b/,
       /\b(nahi\s*chahiye|mat\s*rakh|hata|chhod)\b/,
       /\b(theesko|edukkaathe|teeseyandi)\b/,
+      // Hindi script
+      /हटाओ|निकालो|हटा\s*दो|नहीं\s*चाहिए|मत\s*रखो/,
     ],
     search: [
       /\b(find|search|show|dikhao|dikha\s*do|dhundho|kahan|kidhar)\b/,
       /\b(look\s*for|where|filter|browse)\b/,
       /\b(under\s*\d|below\s*\d|kam\s*\d)/,
+      // Hindi script
+      /दिखाओ|ढूंढो|कहाँ|खोजो/,
     ],
     update_qty: [
       /\b(change|update|modify|badlo|badal\s*do|set\s*to)\b/,
       /\b(quantity|increase|decrease|zyada|kam\s*kar)\b/,
       /\b(make\s*it|kar\s*do)\b.*\d/,
+      // Hindi script
+      /बदलो|बढ़ाओ|कम\s*करो|ज़्यादा/,
     ],
     add: [
       /\b(add|buy|get|lao|lana|le\s*aao|chahiye|daalo|daal\s*do)\b/,
       /\b(need|want|bring|lena|le\s*lo|bhi\s*lao|manga|mangao)\b/,
       /\b(put|include|beku|vendum|kaavali|laagte)\b/,
+      // Hindi script
+      /चाहिए|लाओ|लेना|डालो|ख़रीदो|लेकर\s*आओ/,
     ],
   };
 
@@ -148,12 +158,38 @@ function classifyWithRegex(text: string): { action: string; confidence: number }
 
 // --- Main Public API ---
 
-/** Parse a full transcript into an intent + multiple extracted entities */
 export async function parseIntent(transcript: string): Promise<ParsedMultiIntent> {
   const { action } = await classifyWithModel(transcript);
+
+  // Step 1: Try local entity extraction first
   const entities = extractEntities(transcript);
 
-  // If no entities found, return a single item with the raw transcript
+  // Check if local extraction produced good results
+  const hasGoodResults = entities.length > 0 && entities.some(e => e.confidence >= 0.7);
+  const isNonLatin = hasNonLatinScript(transcript);
+
+  // Step 2: If local extraction failed or text is in non-Latin script, use LLM fallback
+  if (!hasGoodResults || isNonLatin) {
+    console.log('Local NLP insufficient, calling Gemma API fallback...');
+    try {
+      const llmEntities = await extractEntitiesWithLLM(transcript);
+      if (llmEntities.length > 0) {
+        return {
+          action: action as ParsedMultiIntent['action'],
+          items: llmEntities.map(e => ({
+            action: action as ParsedIntent['action'],
+            item: e.item,
+            quantity: e.quantity,
+            unit: e.unit,
+          })),
+        };
+      }
+    } catch (e) {
+      console.warn('LLM fallback failed, using local results:', e);
+    }
+  }
+
+  // Step 3: Use local results (or raw transcript as last resort)
   if (entities.length === 0) {
     return {
       action: action as ParsedMultiIntent['action'],

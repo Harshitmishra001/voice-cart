@@ -31,7 +31,7 @@ function App() {
   const setSubstituteModal = useStore((s) => s.setSubstituteModal);
   
   const { cartCount, addItem } = useShoppingList();
-  const { toggleListening, isSupported } = useVoiceInput();
+  const { toggleListening, isSupported, isListening, isProcessing } = useVoiceInput();
   const { suggestions, refresh: refreshSuggestions } = useSuggestions();
   const { searchResults, hasResults, clearResults } = useVoiceSearch();
 
@@ -86,7 +86,7 @@ function App() {
         )}
       </div>
 
-      {isSupported && (
+      {isSupported && !isListening && !isProcessing && (
         <div className="fab-container">
           <button className="fab" onClick={toggleListening}>
             <span className="material-symbols-outlined">mic</span>
