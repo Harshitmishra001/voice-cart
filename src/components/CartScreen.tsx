@@ -111,8 +111,8 @@ export const CartScreen: React.FC = () => {
                   >
                     <span className="material-symbols-outlined" style={{ fontSize: 18 }}>remove</span>
                   </button>
-                  <span style={{ fontSize: 14, fontWeight: 500, minWidth: 20, textAlign: 'center' }}>
-                    {item.quantity}
+                  <span style={{ fontSize: 14, fontWeight: 500, minWidth: 40, textAlign: 'center', padding: '0 4px' }}>
+                    {item.quantity} {item.unit}
                   </span>
                   <button 
                     className="qty-btn"
