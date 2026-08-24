@@ -79,29 +79,6 @@ function App() {
       </div>
 
       <div className="main-content">
-        {!hasApiKey() && <ApiKeyPrompt onSaved={refreshSuggestions} />}
-        
-        {/* Suggestions Row */}
-        {suggestions.length > 0 && (
-          <div style={{ marginBottom: 24 }}>
-            <h3 style={{ fontSize: 14, fontWeight: 600, color: 'var(--md-sys-color-on-surface-variant)' }}>
-              You might need
-            </h3>
-            <div className="chip-group">
-              {suggestions.map((sug, i) => (
-                <button 
-                  key={i} 
-                  className="chip ai-suggestion"
-                  onClick={() => addItem(sug, 1, 'pcs')}
-                >
-                  <span className="material-symbols-outlined" style={{ fontSize: 16 }}>add</span>
-                  {sug}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-
         {cartCount === 0 ? (
           <EmptyCart onStartShopping={toggleListening} />
         ) : (

@@ -208,10 +208,10 @@ function extractEntities(text: string): { item: string; quantity: number; unit: 
       (w) => w.length > 1 && !stopWords.has(w) && !/^\d+$/.test(w)
     );
 
-    item = candidates.join(' ') || words[words.length - 1] || '';
+    item = candidates.join(' ') || words[words.length - 1] || 'Unknown Item';
   }
 
-  return { item, quantity, unit };
+  return { item: item || 'Unknown Item', quantity, unit };
 }
 
 export async function parseIntent(transcript: string): Promise<ParsedIntent> {
