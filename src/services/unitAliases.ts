@@ -23,8 +23,17 @@ const UNIT_ALIAS_MAP: Record<string, string> = {
   'can': 'can', 'cans': 'can',
   'carton': 'carton', 'cartons': 'carton',
 
-  // Hindi unit words
-  'tel': 'L', // contextual — "tel" means oil but "liter tel" = liter
+  // Hindi unit words (Roman & Devanagari)
+  'tel': 'L',
+  'किलो': 'kg', 'किलोग्राम': 'kg',
+  'ग्राम': 'g',
+  'पाव': 'pao',
+  'लीटर': 'L', 'ली': 'L',
+  'मिली': 'ml',
+  'दर्जन': 'dozen',
+  'पैकेट': 'packet',
+  'बोतल': 'bottle',
+  'डिब्बा': 'box'
 };
 
 export function parseUnit(token: string): string | null {

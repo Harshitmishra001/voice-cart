@@ -2,8 +2,8 @@
 
 // Conjunctions across all 8 languages
 const CONJUNCTIONS = [
-  // Hindi/Urdu
-  'aur', 'aor', 'tatha', 'evam',
+  // Hindi/Urdu (Roman & Devanagari)
+  'aur', 'aor', 'tatha', 'evam', 'और', 'तथा', 'एवं',
   // English
   'and', 'also', 'plus',
   // Tamil
@@ -23,15 +23,16 @@ const CONJUNCTIONS = [
 const CONJUNCTIONS_SET = new Set(CONJUNCTIONS.map(c => c.toLowerCase()));
 
 export function segmentByConjunction(text: string): string[] {
-  // Build regex dynamically from conjunction list
+  // Use a capturing group so we can filter out the conjunctions later
   const pattern = new RegExp(
-    `\\b(${CONJUNCTIONS.join('|')})\\b`,
+    `(?:^|\\s)(${CONJUNCTIONS.join('|')})(?:\\s|$)`,
     'gi'
   );
+  
   const parts = text
     .split(pattern)
     .map(s => s.trim())
-    .filter(s => s.length > 1 && !CONJUNCTIONS_SET.has(s.toLowerCase()));
+    .filter(s => s.length > 0 && !CONJUNCTIONS_SET.has(s.toLowerCase()));
 
   return parts.length > 0 ? parts : [text.trim()];
 }
