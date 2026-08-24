@@ -23,12 +23,12 @@ export function searchProducts(query: string, maxPrice?: number): Product[] {
 
 export function extractPriceFilter(transcript: string): number | null {
   const match = transcript.match(
-    /(?:under|below|kam|less|within|upto|under)\s*(?:₹|rs\.?|rupees?)?\s*(\d+)/i
+    /(?:under|below|kam|less|within|upto|under)\s*(?:₹|\$|rs\.?|rupees?|dollars?|bucks?)?\s*(\d+)/i
   );
   if (match) return parseInt(match[1], 10);
 
   const matchReverse = transcript.match(
-    /(\d+)\s*(?:₹|rs\.?|rupees?)?\s*(?:se\s*kam|ke\s*under|ke\s*niche)/i
+    /(\d+)\s*(?:₹|\$|rs\.?|rupees?|dollars?|bucks?)?\s*(?:se\s*kam|ke\s*under|ke\s*niche)/i
   );
   if (matchReverse) return parseInt(matchReverse[1], 10);
 
