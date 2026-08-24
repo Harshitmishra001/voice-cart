@@ -64,7 +64,7 @@ export const CartScreen: React.FC = () => {
   };
 
   return (
-    <div className="cart-screen" style={{ paddingBottom: 64 }}>
+    <div className="cart-screen">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 600 }}>Your List ({cartCount})</h2>
         <div style={{ display: 'flex', gap: 16 }}>
@@ -145,28 +145,7 @@ export const CartScreen: React.FC = () => {
       </AnimatePresence>
       
       {totalPrice > 0 && (
-        <div 
-          className="slide-up"
-          style={{ 
-            position: 'fixed',
-            bottom: 104,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: 'calc(100% - 40px)',
-            maxWidth: 440,
-            background: 'rgba(255,255,255,0.9)',
-            backdropFilter: 'blur(16px)',
-            WebkitBackdropFilter: 'blur(16px)',
-            padding: '16px 24px',
-            borderRadius: 24,
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
-            border: '1px solid rgba(255,255,255,0.4)',
-            zIndex: 30
-          }}
-        >
+        <div className="total-floating-card slide-up">
           <span style={{ fontSize: 15, fontWeight: 600, color: 'var(--md-sys-color-on-surface-variant)' }}>Total Estimated</span>
           <span style={{ fontSize: 24, fontWeight: 800, color: 'var(--md-sys-color-primary)', letterSpacing: '-0.5px' }}>
             ₹{totalPrice}
