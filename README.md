@@ -1,6 +1,7 @@
 # Voice Cart - Voice Command Shopping Assistant
 
 ### 🚀 **Live Demo:** [voice-cart-phi.vercel.app](https://voice-cart-phi.vercel.app/)
+### 📺 **Video Demo:** [Watch on YouTube](https://youtu.be/XZWiMCfW6LA)
 
 Voice Cart is a fully voice-activated, multilingual shopping list manager designed for speed, privacy, and a seamless user experience. It leverages an advanced local NLP pipeline with an AI-powered fallback to understand complex shopping commands instantly. 
 
