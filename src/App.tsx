@@ -21,6 +21,7 @@ import { getSubstitutes } from './services/llm.service';
 
 function App() {
   const language = useStore((s) => s.language);
+  const hasSelectedLanguage = useStore((s) => s.hasSelectedLanguage);
   const setLanguage = useStore((s) => s.setLanguage);
   const isLanguagePickerOpen = useStore((s) => s.isLanguagePickerOpen);
   const setLanguagePickerOpen = useStore((s) => s.setLanguagePickerOpen);
@@ -100,7 +101,7 @@ function App() {
         onClose={() => setLanguagePickerOpen(false)} 
         onSelect={setLanguage} 
         currentLanguage={language} 
-        canClose={useStore(s => s.hasSelectedLanguage)}
+        canClose={hasSelectedLanguage}
       />
       
       <ListeningOverlay onStop={toggleListening} />
