@@ -7,9 +7,10 @@ export interface LanguagePickerProps {
   onClose: () => void;
   onSelect: (langCode: string) => void;
   currentLanguage: string;
+  canClose?: boolean;
 }
 
-export const LanguagePicker: React.FC<LanguagePickerProps> = ({ isOpen, onClose, onSelect, currentLanguage }) => {
+export const LanguagePicker: React.FC<LanguagePickerProps> = ({ isOpen, onClose, onSelect, currentLanguage, canClose = true }) => {
   const [search, setSearch] = useState('');
   
   if (!isOpen) return null;
@@ -21,9 +22,13 @@ export const LanguagePicker: React.FC<LanguagePickerProps> = ({ isOpen, onClose,
   return (
     <div className="full-screen-modal">
       <div className="app-header" style={{ borderBottom: 'none' }}>
-        <button onClick={onClose} style={{ padding: 8 }}>
-          <span className="material-symbols-outlined">close</span>
-        </button>
+        {canClose ? (
+          <button onClick={onClose} style={{ padding: 8 }}>
+            <span className="material-symbols-outlined">close</span>
+          </button>
+        ) : (
+          <div style={{ width: 40 }}></div>
+        )}
         <h2 style={{ fontSize: 18, fontWeight: 500 }}>Select Language</h2>
         <div style={{ width: 40 }}></div>
       </div>

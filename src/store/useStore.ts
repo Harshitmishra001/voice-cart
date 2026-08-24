@@ -4,6 +4,7 @@ import { CartItem, Product } from '../types';
 interface StoreState {
   cart: CartItem[];
   language: string;
+  hasSelectedLanguage: boolean;
   listeningState: 'idle' | 'listening' | 'processing';
   transcript: string;
   suggestions: string[];
@@ -33,12 +34,13 @@ interface StoreState {
 
 export const useStore = create<StoreState>((set) => ({
   cart: [],
-  language: 'en-IN',
+  language: localStorage.getItem('language') || 'en-IN',
+  hasSelectedLanguage: localStorage.getItem('hasSelectedLanguage') === 'true',
   listeningState: 'idle',
   transcript: '',
   suggestions: [],
   searchResults: [],
-  isLanguagePickerOpen: false,
+  isLanguagePickerOpen: localStorage.getItem('hasSelectedLanguage') !== 'true', // Open by default if not selected
   isSubstituteModalOpen: false,
   outOfStockItem: null,
   substitutes: [],
@@ -79,7 +81,11 @@ export const useStore = create<StoreState>((set) => ({
 
   clearCart: () => set({ cart: [] }),
 
-  setLanguage: (code) => set({ language: code }),
+  setLanguage: (code) => {
+    localStorage.setItem('language', code);
+    localStorage.setItem('hasSelectedLanguage', 'true');
+    set({ language: code, hasSelectedLanguage: true });
+  },
 
   setListeningState: (state) => set({ listeningState: state }),
 

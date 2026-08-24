@@ -100,6 +100,7 @@ function App() {
         onClose={() => setLanguagePickerOpen(false)} 
         onSelect={setLanguage} 
         currentLanguage={language} 
+        canClose={useStore(s => s.hasSelectedLanguage)}
       />
       
       <ListeningOverlay onStop={toggleListening} />
