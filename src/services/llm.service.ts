@@ -100,7 +100,7 @@ export async function extractEntitiesWithLLM(
     const systemPrompt = `You are a grocery item parser. The user spoke a shopping command (possibly in Hindi, Tamil, Telugu, Kannada, Bengali, Marathi, Malayalam, or English). Extract ALL grocery items mentioned.
 
 For EACH item, return:
-- "item": the English name of the grocery item (always in English, e.g. "onion" not "pyaaz")
+- "item": the English name of the grocery item (always in English and strictly in SINGULAR form, e.g. "onion" not "onions", "tomato" not "tomatoes")
 - "quantity": the numeric quantity (default 1)
 - "unit": the unit (kg, L, g, pcs, packet, bottle, box, dozen, pao, bunch, can). Default "pcs".
 

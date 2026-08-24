@@ -1,52 +1,1042 @@
 [
-  { "id": "1", "name": "Whole Milk", "category": "dairy", "unit": "L", "price": 60, "inStock": true },
-  { "id": "2", "name": "Yogurt", "category": "dairy", "unit": "kg", "price": 55, "inStock": true },
-  { "id": "3", "name": "Butter", "category": "dairy", "unit": "pcs", "price": 52, "inStock": true },
-  { "id": "4", "name": "Cheese", "category": "dairy", "unit": "pcs", "price": 120, "inStock": true },
-  { "id": "5", "name": "Paneer", "category": "dairy", "unit": "kg", "price": 320, "inStock": true },
-  { "id": "6", "name": "Cream", "category": "dairy", "unit": "pcs", "price": 45, "inStock": false },
-  { "id": "7", "name": "Ghee", "category": "dairy", "unit": "L", "price": 550, "inStock": true },
-  { "id": "8", "name": "Curd", "category": "dairy", "unit": "kg", "price": 40, "inStock": true },
-  { "id": "9", "name": "Tomato", "category": "produce", "unit": "kg", "price": 30, "inStock": true },
-  { "id": "10", "name": "Onion", "category": "produce", "unit": "kg", "price": 35, "inStock": true },
-  { "id": "11", "name": "Potato", "category": "produce", "unit": "kg", "price": 25, "inStock": true },
-  { "id": "12", "name": "Spinach", "category": "produce", "unit": "pcs", "price": 20, "inStock": true },
-  { "id": "13", "name": "Banana", "category": "produce", "unit": "pcs", "price": 40, "inStock": true },
-  { "id": "14", "name": "Apple", "category": "produce", "unit": "kg", "price": 180, "inStock": true },
-  { "id": "15", "name": "Mango", "category": "produce", "unit": "kg", "price": 120, "inStock": true },
-  { "id": "16", "name": "Lemon", "category": "produce", "unit": "pcs", "price": 10, "inStock": true },
-  { "id": "17", "name": "Ginger", "category": "produce", "unit": "kg", "price": 80, "inStock": true },
-  { "id": "18", "name": "Garlic", "category": "produce", "unit": "kg", "price": 150, "inStock": true },
-  { "id": "19", "name": "Carrot", "category": "produce", "unit": "kg", "price": 40, "inStock": true },
-  { "id": "20", "name": "Capsicum", "category": "produce", "unit": "kg", "price": 60, "inStock": false },
-  { "id": "21", "name": "Bread", "category": "bakery", "unit": "pcs", "price": 40, "inStock": true },
-  { "id": "22", "name": "Sourdough", "category": "bakery", "unit": "pcs", "price": 120, "inStock": true },
-  { "id": "23", "name": "Buns", "category": "bakery", "unit": "pcs", "price": 30, "inStock": true },
-  { "id": "24", "name": "Rusk", "category": "bakery", "unit": "pcs", "price": 35, "inStock": true },
-  { "id": "25", "name": "Cookies", "category": "bakery", "unit": "pcs", "price": 50, "inStock": true },
-  { "id": "26", "name": "Water", "category": "beverages", "unit": "L", "price": 20, "inStock": true },
-  { "id": "27", "name": "Orange Juice", "category": "beverages", "unit": "L", "price": 90, "inStock": true },
-  { "id": "28", "name": "Coconut Water", "category": "beverages", "unit": "pcs", "price": 40, "inStock": true },
-  { "id": "29", "name": "Tea", "category": "beverages", "unit": "pcs", "price": 180, "inStock": true },
-  { "id": "30", "name": "Coffee", "category": "beverages", "unit": "pcs", "price": 250, "inStock": true },
-  { "id": "31", "name": "Nimbu Pani", "category": "beverages", "unit": "L", "price": 35, "inStock": true },
-  { "id": "32", "name": "Chips", "category": "snacks", "unit": "pcs", "price": 20, "inStock": true },
-  { "id": "33", "name": "Biscuits", "category": "snacks", "unit": "pcs", "price": 30, "inStock": true },
-  { "id": "34", "name": "Namkeen", "category": "snacks", "unit": "pcs", "price": 40, "inStock": true },
-  { "id": "35", "name": "Popcorn", "category": "snacks", "unit": "pcs", "price": 25, "inStock": true },
-  { "id": "36", "name": "Chocolate", "category": "snacks", "unit": "pcs", "price": 50, "inStock": true },
-  { "id": "37", "name": "Rice", "category": "pantry", "unit": "kg", "price": 60, "inStock": true },
-  { "id": "38", "name": "Dal", "category": "pantry", "unit": "kg", "price": 120, "inStock": true },
-  { "id": "39", "name": "Oil", "category": "pantry", "unit": "L", "price": 150, "inStock": true },
-  { "id": "40", "name": "Sugar", "category": "pantry", "unit": "kg", "price": 45, "inStock": true },
-  { "id": "41", "name": "Salt", "category": "pantry", "unit": "kg", "price": 20, "inStock": true },
-  { "id": "42", "name": "Flour", "category": "pantry", "unit": "kg", "price": 40, "inStock": true },
-  { "id": "43", "name": "Turmeric", "category": "pantry", "unit": "pcs", "price": 30, "inStock": true },
-  { "id": "44", "name": "Cumin", "category": "pantry", "unit": "pcs", "price": 35, "inStock": true },
-  { "id": "45", "name": "Toothpaste", "category": "personal_care", "unit": "pcs", "price": 80, "inStock": true },
-  { "id": "46", "name": "Soap", "category": "personal_care", "unit": "pcs", "price": 35, "inStock": true },
-  { "id": "47", "name": "Shampoo", "category": "personal_care", "unit": "pcs", "price": 120, "inStock": true },
-  { "id": "48", "name": "Hand Wash", "category": "personal_care", "unit": "pcs", "price": 75, "inStock": true },
-  { "id": "49", "name": "Ice Cream", "category": "frozen", "unit": "pcs", "price": 80, "inStock": true },
-  { "id": "50", "name": "Frozen Peas", "category": "frozen", "unit": "kg", "price": 60, "inStock": true }
+  {
+    "id": "1",
+    "name": "Whole Milk",
+    "category": "dairy",
+    "unit": "L",
+    "price": 60,
+    "inStock": true
+  },
+  {
+    "id": "2",
+    "name": "Yogurt",
+    "category": "dairy",
+    "unit": "kg",
+    "price": 55,
+    "inStock": true
+  },
+  {
+    "id": "3",
+    "name": "Butter",
+    "category": "dairy",
+    "unit": "pcs",
+    "price": 52,
+    "inStock": true
+  },
+  {
+    "id": "4",
+    "name": "Cheese",
+    "category": "dairy",
+    "unit": "pcs",
+    "price": 120,
+    "inStock": true
+  },
+  {
+    "id": "5",
+    "name": "Paneer",
+    "category": "dairy",
+    "unit": "kg",
+    "price": 320,
+    "inStock": true
+  },
+  {
+    "id": "6",
+    "name": "Cream",
+    "category": "dairy",
+    "unit": "pcs",
+    "price": 45,
+    "inStock": false
+  },
+  {
+    "id": "7",
+    "name": "Ghee",
+    "category": "dairy",
+    "unit": "L",
+    "price": 550,
+    "inStock": true
+  },
+  {
+    "id": "8",
+    "name": "Curd",
+    "category": "dairy",
+    "unit": "kg",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "9",
+    "name": "Tomato",
+    "category": "produce",
+    "unit": "kg",
+    "price": 30,
+    "inStock": true
+  },
+  {
+    "id": "10",
+    "name": "Onion",
+    "category": "produce",
+    "unit": "kg",
+    "price": 35,
+    "inStock": true
+  },
+  {
+    "id": "11",
+    "name": "Potato",
+    "category": "produce",
+    "unit": "kg",
+    "price": 25,
+    "inStock": true
+  },
+  {
+    "id": "12",
+    "name": "Spinach",
+    "category": "produce",
+    "unit": "pcs",
+    "price": 20,
+    "inStock": true
+  },
+  {
+    "id": "13",
+    "name": "Banana",
+    "category": "produce",
+    "unit": "pcs",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "14",
+    "name": "Apple",
+    "category": "produce",
+    "unit": "kg",
+    "price": 180,
+    "inStock": true
+  },
+  {
+    "id": "15",
+    "name": "Mango",
+    "category": "produce",
+    "unit": "kg",
+    "price": 120,
+    "inStock": true
+  },
+  {
+    "id": "16",
+    "name": "Lemon",
+    "category": "produce",
+    "unit": "pcs",
+    "price": 10,
+    "inStock": true
+  },
+  {
+    "id": "17",
+    "name": "Ginger",
+    "category": "produce",
+    "unit": "kg",
+    "price": 80,
+    "inStock": true
+  },
+  {
+    "id": "18",
+    "name": "Garlic",
+    "category": "produce",
+    "unit": "kg",
+    "price": 150,
+    "inStock": true
+  },
+  {
+    "id": "19",
+    "name": "Carrot",
+    "category": "produce",
+    "unit": "kg",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "20",
+    "name": "Capsicum",
+    "category": "produce",
+    "unit": "kg",
+    "price": 60,
+    "inStock": false
+  },
+  {
+    "id": "21",
+    "name": "Bread",
+    "category": "bakery",
+    "unit": "pcs",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "22",
+    "name": "Sourdough",
+    "category": "bakery",
+    "unit": "pcs",
+    "price": 120,
+    "inStock": true
+  },
+  {
+    "id": "23",
+    "name": "Buns",
+    "category": "bakery",
+    "unit": "pcs",
+    "price": 30,
+    "inStock": true
+  },
+  {
+    "id": "24",
+    "name": "Rusk",
+    "category": "bakery",
+    "unit": "pcs",
+    "price": 35,
+    "inStock": true
+  },
+  {
+    "id": "25",
+    "name": "Cookies",
+    "category": "bakery",
+    "unit": "pcs",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "26",
+    "name": "Water",
+    "category": "beverages",
+    "unit": "L",
+    "price": 20,
+    "inStock": true
+  },
+  {
+    "id": "27",
+    "name": "Orange Juice",
+    "category": "beverages",
+    "unit": "L",
+    "price": 90,
+    "inStock": true
+  },
+  {
+    "id": "28",
+    "name": "Coconut Water",
+    "category": "beverages",
+    "unit": "pcs",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "29",
+    "name": "Tea",
+    "category": "beverages",
+    "unit": "pcs",
+    "price": 180,
+    "inStock": true
+  },
+  {
+    "id": "30",
+    "name": "Coffee",
+    "category": "beverages",
+    "unit": "pcs",
+    "price": 250,
+    "inStock": true
+  },
+  {
+    "id": "31",
+    "name": "Nimbu Pani",
+    "category": "beverages",
+    "unit": "L",
+    "price": 35,
+    "inStock": true
+  },
+  {
+    "id": "32",
+    "name": "Chips",
+    "category": "snacks",
+    "unit": "pcs",
+    "price": 20,
+    "inStock": true
+  },
+  {
+    "id": "33",
+    "name": "Biscuits",
+    "category": "snacks",
+    "unit": "pcs",
+    "price": 30,
+    "inStock": true
+  },
+  {
+    "id": "34",
+    "name": "Namkeen",
+    "category": "snacks",
+    "unit": "pcs",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "35",
+    "name": "Popcorn",
+    "category": "snacks",
+    "unit": "pcs",
+    "price": 25,
+    "inStock": true
+  },
+  {
+    "id": "36",
+    "name": "Chocolate",
+    "category": "snacks",
+    "unit": "pcs",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "37",
+    "name": "Rice",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 60,
+    "inStock": true
+  },
+  {
+    "id": "38",
+    "name": "Dal",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 120,
+    "inStock": true
+  },
+  {
+    "id": "39",
+    "name": "Oil",
+    "category": "pantry",
+    "unit": "L",
+    "price": 150,
+    "inStock": true
+  },
+  {
+    "id": "40",
+    "name": "Sugar",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 45,
+    "inStock": true
+  },
+  {
+    "id": "41",
+    "name": "Salt",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 20,
+    "inStock": true
+  },
+  {
+    "id": "42",
+    "name": "Flour",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "43",
+    "name": "Turmeric",
+    "category": "pantry",
+    "unit": "pcs",
+    "price": 30,
+    "inStock": true
+  },
+  {
+    "id": "44",
+    "name": "Cumin",
+    "category": "pantry",
+    "unit": "pcs",
+    "price": 35,
+    "inStock": true
+  },
+  {
+    "id": "45",
+    "name": "Toothpaste",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 80,
+    "inStock": true
+  },
+  {
+    "id": "46",
+    "name": "Soap",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 35,
+    "inStock": true
+  },
+  {
+    "id": "47",
+    "name": "Shampoo",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 120,
+    "inStock": true
+  },
+  {
+    "id": "48",
+    "name": "Hand Wash",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 75,
+    "inStock": true
+  },
+  {
+    "id": "49",
+    "name": "Ice Cream",
+    "category": "frozen",
+    "unit": "pcs",
+    "price": 80,
+    "inStock": true
+  },
+  {
+    "id": "50",
+    "name": "Frozen Peas",
+    "category": "frozen",
+    "unit": "kg",
+    "price": 60,
+    "inStock": true
+  },
+  {
+    "id": "51",
+    "name": "Chicken",
+    "category": "meat",
+    "unit": "kg",
+    "price": 250,
+    "inStock": true
+  },
+  {
+    "id": "52",
+    "name": "Eggs",
+    "category": "dairy",
+    "unit": "dozen",
+    "price": 80,
+    "inStock": true
+  },
+  {
+    "id": "53",
+    "name": "Fish",
+    "category": "meat",
+    "unit": "kg",
+    "price": 300,
+    "inStock": true
+  },
+  {
+    "id": "54",
+    "name": "Mutton",
+    "category": "meat",
+    "unit": "kg",
+    "price": 800,
+    "inStock": true
+  },
+  {
+    "id": "55",
+    "name": "Pork",
+    "category": "meat",
+    "unit": "kg",
+    "price": 400,
+    "inStock": true
+  },
+  {
+    "id": "56",
+    "name": "Beef",
+    "category": "meat",
+    "unit": "kg",
+    "price": 500,
+    "inStock": true
+  },
+  {
+    "id": "57",
+    "name": "Cabbage",
+    "category": "produce",
+    "unit": "kg",
+    "price": 30,
+    "inStock": true
+  },
+  {
+    "id": "58",
+    "name": "Cauliflower",
+    "category": "produce",
+    "unit": "pcs",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "59",
+    "name": "Broccoli",
+    "category": "produce",
+    "unit": "pcs",
+    "price": 150,
+    "inStock": true
+  },
+  {
+    "id": "60",
+    "name": "Cucumber",
+    "category": "produce",
+    "unit": "kg",
+    "price": 35,
+    "inStock": true
+  },
+  {
+    "id": "61",
+    "name": "Brinjal",
+    "category": "produce",
+    "unit": "kg",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "62",
+    "name": "Eggplant",
+    "category": "produce",
+    "unit": "kg",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "63",
+    "name": "Okra",
+    "category": "produce",
+    "unit": "kg",
+    "price": 60,
+    "inStock": true
+  },
+  {
+    "id": "64",
+    "name": "Lady Finger",
+    "category": "produce",
+    "unit": "kg",
+    "price": 60,
+    "inStock": true
+  },
+  {
+    "id": "65",
+    "name": "Peas",
+    "category": "produce",
+    "unit": "kg",
+    "price": 80,
+    "inStock": true
+  },
+  {
+    "id": "66",
+    "name": "Green Chili",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "67",
+    "name": "Coriander",
+    "category": "produce",
+    "unit": "bunch",
+    "price": 15,
+    "inStock": true
+  },
+  {
+    "id": "68",
+    "name": "Mint",
+    "category": "produce",
+    "unit": "bunch",
+    "price": 15,
+    "inStock": true
+  },
+  {
+    "id": "69",
+    "name": "Curry Leaves",
+    "category": "produce",
+    "unit": "bunch",
+    "price": 10,
+    "inStock": true
+  },
+  {
+    "id": "70",
+    "name": "Papaya",
+    "category": "produce",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "71",
+    "name": "Watermelon",
+    "category": "produce",
+    "unit": "kg",
+    "price": 30,
+    "inStock": true
+  },
+  {
+    "id": "72",
+    "name": "Grapes",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "73",
+    "name": "Orange",
+    "category": "produce",
+    "unit": "kg",
+    "price": 80,
+    "inStock": true
+  },
+  {
+    "id": "74",
+    "name": "Pineapple",
+    "category": "produce",
+    "unit": "pcs",
+    "price": 70,
+    "inStock": true
+  },
+  {
+    "id": "75",
+    "name": "Strawberry",
+    "category": "produce",
+    "unit": "box",
+    "price": 200,
+    "inStock": true
+  },
+  {
+    "id": "76",
+    "name": "Blueberry",
+    "category": "produce",
+    "unit": "box",
+    "price": 350,
+    "inStock": true
+  },
+  {
+    "id": "77",
+    "name": "Almonds",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 800,
+    "inStock": true
+  },
+  {
+    "id": "78",
+    "name": "Cashews",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 900,
+    "inStock": true
+  },
+  {
+    "id": "79",
+    "name": "Walnuts",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 1200,
+    "inStock": true
+  },
+  {
+    "id": "80",
+    "name": "Raisins",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 300,
+    "inStock": true
+  },
+  {
+    "id": "81",
+    "name": "Peanuts",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 150,
+    "inStock": true
+  },
+  {
+    "id": "82",
+    "name": "Honey",
+    "category": "pantry",
+    "unit": "bottle",
+    "price": 250,
+    "inStock": true
+  },
+  {
+    "id": "83",
+    "name": "Peanut Butter",
+    "category": "pantry",
+    "unit": "bottle",
+    "price": 300,
+    "inStock": true
+  },
+  {
+    "id": "84",
+    "name": "Jam",
+    "category": "pantry",
+    "unit": "bottle",
+    "price": 150,
+    "inStock": true
+  },
+  {
+    "id": "85",
+    "name": "Ketchup",
+    "category": "pantry",
+    "unit": "bottle",
+    "price": 120,
+    "inStock": true
+  },
+  {
+    "id": "86",
+    "name": "Mayonnaise",
+    "category": "pantry",
+    "unit": "bottle",
+    "price": 180,
+    "inStock": true
+  },
+  {
+    "id": "87",
+    "name": "Mustard",
+    "category": "pantry",
+    "unit": "bottle",
+    "price": 80,
+    "inStock": true
+  },
+  {
+    "id": "88",
+    "name": "Soy Sauce",
+    "category": "pantry",
+    "unit": "bottle",
+    "price": 90,
+    "inStock": true
+  },
+  {
+    "id": "89",
+    "name": "Vinegar",
+    "category": "pantry",
+    "unit": "bottle",
+    "price": 60,
+    "inStock": true
+  },
+  {
+    "id": "90",
+    "name": "Olive Oil",
+    "category": "pantry",
+    "unit": "L",
+    "price": 800,
+    "inStock": true
+  },
+  {
+    "id": "91",
+    "name": "Sunflower Oil",
+    "category": "pantry",
+    "unit": "L",
+    "price": 160,
+    "inStock": true
+  },
+  {
+    "id": "92",
+    "name": "Mustard Oil",
+    "category": "pantry",
+    "unit": "L",
+    "price": 180,
+    "inStock": true
+  },
+  {
+    "id": "93",
+    "name": "Basmati Rice",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 120,
+    "inStock": true
+  },
+  {
+    "id": "94",
+    "name": "Brown Rice",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "95",
+    "name": "Wheat Flour",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 45,
+    "inStock": true
+  },
+  {
+    "id": "96",
+    "name": "Maida",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "97",
+    "name": "Besan",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 80,
+    "inStock": true
+  },
+  {
+    "id": "98",
+    "name": "Moong Dal",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 130,
+    "inStock": true
+  },
+  {
+    "id": "99",
+    "name": "Toor Dal",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 160,
+    "inStock": true
+  },
+  {
+    "id": "100",
+    "name": "Chana Dal",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 90,
+    "inStock": true
+  },
+  {
+    "id": "101",
+    "name": "Urad Dal",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 140,
+    "inStock": true
+  },
+  {
+    "id": "102",
+    "name": "Masoor Dal",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 110,
+    "inStock": true
+  },
+  {
+    "id": "103",
+    "name": "Rajma",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 150,
+    "inStock": true
+  },
+  {
+    "id": "104",
+    "name": "Chole",
+    "category": "pantry",
+    "unit": "kg",
+    "price": 140,
+    "inStock": true
+  },
+  {
+    "id": "105",
+    "name": "Black Pepper",
+    "category": "pantry",
+    "unit": "g",
+    "price": 5,
+    "inStock": true
+  },
+  {
+    "id": "106",
+    "name": "Cardamom",
+    "category": "pantry",
+    "unit": "g",
+    "price": 20,
+    "inStock": true
+  },
+  {
+    "id": "107",
+    "name": "Cinnamon",
+    "category": "pantry",
+    "unit": "g",
+    "price": 10,
+    "inStock": true
+  },
+  {
+    "id": "108",
+    "name": "Cloves",
+    "category": "pantry",
+    "unit": "g",
+    "price": 15,
+    "inStock": true
+  },
+  {
+    "id": "109",
+    "name": "Red Chili Powder",
+    "category": "pantry",
+    "unit": "pcs",
+    "price": 60,
+    "inStock": true
+  },
+  {
+    "id": "110",
+    "name": "Coriander Powder",
+    "category": "pantry",
+    "unit": "pcs",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "111",
+    "name": "Garam Masala",
+    "category": "pantry",
+    "unit": "pcs",
+    "price": 80,
+    "inStock": true
+  },
+  {
+    "id": "112",
+    "name": "Toothbrush",
+    "category": "personal_care",
+    "unit": "pcs",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "113",
+    "name": "Mouthwash",
+    "category": "personal_care",
+    "unit": "bottle",
+    "price": 150,
+    "inStock": true
+  },
+  {
+    "id": "114",
+    "name": "Body Wash",
+    "category": "personal_care",
+    "unit": "bottle",
+    "price": 250,
+    "inStock": true
+  },
+  {
+    "id": "115",
+    "name": "Face Wash",
+    "category": "personal_care",
+    "unit": "bottle",
+    "price": 180,
+    "inStock": true
+  },
+  {
+    "id": "116",
+    "name": "Deodorant",
+    "category": "personal_care",
+    "unit": "bottle",
+    "price": 200,
+    "inStock": true
+  },
+  {
+    "id": "117",
+    "name": "Perfume",
+    "category": "personal_care",
+    "unit": "bottle",
+    "price": 500,
+    "inStock": true
+  },
+  {
+    "id": "118",
+    "name": "Toilet Paper",
+    "category": "household",
+    "unit": "pcs",
+    "price": 40,
+    "inStock": true
+  },
+  {
+    "id": "119",
+    "name": "Tissue Paper",
+    "category": "household",
+    "unit": "box",
+    "price": 60,
+    "inStock": true
+  },
+  {
+    "id": "120",
+    "name": "Detergent",
+    "category": "household",
+    "unit": "kg",
+    "price": 150,
+    "inStock": true
+  },
+  {
+    "id": "121",
+    "name": "Dish Soap",
+    "category": "household",
+    "unit": "bottle",
+    "price": 90,
+    "inStock": true
+  },
+  {
+    "id": "122",
+    "name": "Floor Cleaner",
+    "category": "household",
+    "unit": "bottle",
+    "price": 120,
+    "inStock": true
+  },
+  {
+    "id": "123",
+    "name": "Garbage Bags",
+    "category": "household",
+    "unit": "packet",
+    "price": 80,
+    "inStock": true
+  },
+  {
+    "id": "124",
+    "name": "Aluminum Foil",
+    "category": "household",
+    "unit": "box",
+    "price": 150,
+    "inStock": true
+  },
+  {
+    "id": "125",
+    "name": "Cling Film",
+    "category": "household",
+    "unit": "box",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "126",
+    "name": "Matchbox",
+    "category": "household",
+    "unit": "pcs",
+    "price": 2,
+    "inStock": true
+  },
+  {
+    "id": "127",
+    "name": "Candles",
+    "category": "household",
+    "unit": "packet",
+    "price": 50,
+    "inStock": true
+  },
+  {
+    "id": "128",
+    "name": "Batteries",
+    "category": "household",
+    "unit": "pcs",
+    "price": 20,
+    "inStock": true
+  },
+  {
+    "id": "129",
+    "name": "Light Bulb",
+    "category": "household",
+    "unit": "pcs",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "130",
+    "name": "Mosquito Repellent",
+    "category": "household",
+    "unit": "bottle",
+    "price": 85,
+    "inStock": true
+  }
 ]

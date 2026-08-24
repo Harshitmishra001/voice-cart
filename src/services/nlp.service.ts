@@ -177,8 +177,8 @@ export async function parseIntent(transcript: string): Promise<ParsedMultiIntent
   // Step 1: Try local entity extraction first
   const entities = extractEntities(transcript);
 
-  // Check if local extraction produced good results
-  const hasGoodResults = entities.length > 0 && entities.some(e => e.confidence >= 0.7);
+  // Check if local extraction produced perfectly confident results for ALL items
+  const hasGoodResults = entities.length > 0 && entities.every(e => e.confidence >= 0.7);
   const isNonLatin = hasNonLatinScript(transcript);
 
   // Step 2: If local extraction failed or text is in non-Latin script, use LLM fallback
