@@ -1038,5 +1038,117 @@
     "unit": "bottle",
     "price": 85,
     "inStock": true
+  },
+  {
+    "id": "131",
+    "name": "Pomegranate",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "132",
+    "name": "Guava",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "133",
+    "name": "Sweet Lime",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "134",
+    "name": "Pear",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "135",
+    "name": "Peach",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "136",
+    "name": "Plum",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "137",
+    "name": "Lychee",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "138",
+    "name": "Cherry",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "139",
+    "name": "Custard Apple",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "140",
+    "name": "Fig",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "141",
+    "name": "Jackfruit",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "142",
+    "name": "Kiwi",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "143",
+    "name": "Coconut",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
+  },
+  {
+    "id": "144",
+    "name": "Dates",
+    "category": "produce",
+    "unit": "kg",
+    "price": 100,
+    "inStock": true
   }
 ]

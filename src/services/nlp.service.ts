@@ -5,6 +5,7 @@ import { extractEntitiesWithLLM } from './llm.service';
 
 let featureExtractor: any = null;
 let rawWeights: any = null;
+let productEmbeddings: Record<string, number[]> = {};
 let modelsLoaded = false;
 let modelLoadFailed = false;
 
@@ -31,6 +32,12 @@ function denseLayer(vec: number[], w: number[], b: number[], units: number) {
     out[i] = sum;
   }
   return out;
+}
+
+function dotProduct(a: number[], b: number[]): number {
+  let sum = 0;
+  for (let i = 0; i < a.length; i++) sum += a[i] * b[i];
+  return sum;
 }
 
 // --- Detect non-Latin scripts (Devanagari, Tamil, Telugu, etc.) ---
@@ -61,6 +68,13 @@ export async function initModels(): Promise<boolean> {
         console.warn('Weights not found, using regex fallback:', e);
         rawWeights = null;
       }
+      
+      try {
+        const { default: embeddings } = await import('../data/embeddings.json');
+        productEmbeddings = embeddings;
+      } catch (e) {
+        console.warn('Embeddings not found', e);
+      }
       return true;
     };
 
@@ -83,6 +97,26 @@ export async function initModels(): Promise<boolean> {
 
 export function isModelLoaded(): boolean {
   return modelsLoaded;
+}
+
+export async function findClosestProduct(word: string): Promise<string | null> {
+  if (!featureExtractor || Object.keys(productEmbeddings).length === 0) return null;
+  try {
+    const output = await featureExtractor(word, { pooling: 'mean', normalize: true });
+    const vec = Array.from(output.data as Float32Array);
+    let bestMatch = null;
+    let maxSim = 0.82; // threshold for cosine similarity
+    for (const [product, emb] of Object.entries(productEmbeddings)) {
+      const sim = dotProduct(vec, emb);
+      if (sim > maxSim) {
+        maxSim = sim;
+        bestMatch = product;
+      }
+    }
+    return bestMatch;
+  } catch {
+    return null;
+  }
 }
 
 // --- Intent Classification ---
@@ -176,6 +210,18 @@ export async function parseIntent(transcript: string): Promise<ParsedMultiIntent
 
   // Step 1: Try local entity extraction first
   const entities = extractEntities(transcript);
+
+  // Attempt to resolve unknown entities using Cosine Similarity Embeddings
+  for (const e of entities) {
+    if (e.confidence < 0.7) {
+      const closest = await findClosestProduct(e.rawItem);
+      if (closest) {
+        e.item = closest;
+        e.confidence = 0.9;
+        console.log(`Semantic match found: ${e.rawItem} -> ${closest}`);
+      }
+    }
+  }
 
   // Check if local extraction produced perfectly confident results for ALL items
   const hasGoodResults = entities.length > 0 && entities.every(e => e.confidence >= 0.7);
