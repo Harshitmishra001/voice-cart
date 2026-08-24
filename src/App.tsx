@@ -123,6 +123,8 @@ function App() {
         onIgnore={() => setSubstituteModal(null, [])} 
       />
       
+      <VariantModal />
+      
       {hasResults && (
         <VoiceSearchResults 
           results={searchResults} 
