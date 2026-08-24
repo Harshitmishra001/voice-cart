@@ -3,7 +3,7 @@
 const UNIT_ALIAS_MAP: Record<string, string> = {
   // Weight
   'kg': 'kg', 'kilo': 'kg', 'kilos': 'kg', 'kilogram': 'kg',
-  'kilograms': 'kg', 'kgs': 'kg',
+  'kilograms': 'kg', 'kgs': 'kg', 'killo': 'kg',
   'g': 'g', 'gram': 'g', 'grams': 'g', 'gm': 'g', 'gms': 'g',
   'pao': 'pao', 'pau': 'pao', 'paav': 'pao', // 250g Indian unit
 
