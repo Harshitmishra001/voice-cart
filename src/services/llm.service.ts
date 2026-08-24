@@ -66,9 +66,10 @@ async function callLLM(systemPrompt: string, userMessage: string): Promise<strin
 
 export async function getSuggestions(cartItems: string[]): Promise<string[]> {
   try {
-    const systemPrompt =
-      'You are a grocery shopping assistant. Given a shopping cart containing the listed items, suggest 3-5 complementary grocery items the user likely needs. Return ONLY a JSON array of item name strings. No explanation, no markdown, no backticks.';
-    const result = await callLLM(systemPrompt, `Cart items: ${cartItems.join(', ')}`);
+    const result = await callLLM(
+      'You are a smart grocery shopping assistant. The user will provide a list of items currently in their shopping cart. Suggest 3-4 complementary grocery items they might have forgotten. Also, include 1 or 2 seasonal recommendations (e.g., items in season or typically on sale). Return ONLY a JSON array of strings representing the item names. No explanations or markdown.',
+      `Current cart: ${cartItems.join(', ')}`
+    );
     const parsed = JSON.parse(stripCodeBlocks(result));
     return Array.isArray(parsed) ? parsed.filter((s: any) => typeof s === 'string') : [];
   } catch {
