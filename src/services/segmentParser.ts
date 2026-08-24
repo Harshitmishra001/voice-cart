@@ -1,4 +1,4 @@
-// Parse a single text segment to extract one item with quantity and unit
+// Parse a single text segment to extract items with quantity and unit
 
 import { parseNumberWord } from './numberWords';
 import { parseUnit } from './unitAliases';
@@ -32,14 +32,43 @@ export interface ExtractedEntity {
   confidence: number;   // 0-1, how certain we are
 }
 
-export function parseSegment(segment: string): ExtractedEntity | null {
+export function parseSegment(segment: string): ExtractedEntity[] {
   const tokens = segment.toLowerCase().trim().split(/\s+/);
-
-  let quantity: number | null = null;
+  
+  const items: ExtractedEntity[] = [];
+  
+  let quantity = 1;
   let unit: string | null = null;
-  let itemRaw: string | null = null;
   let itemEn: string | null = null;
-  const candidateWords: string[] = [];
+  let itemRaw = '';
+  let candidateWords: string[] = [];
+  let confidence = 0.9;
+
+  const pushCurrentItem = () => {
+    if (itemEn || candidateWords.length > 0) {
+      let finalItem = itemEn;
+      if (!finalItem) {
+        finalItem = candidateWords.join(' ');
+        confidence = 0.6; // lower confidence for unknown items
+      }
+      
+      items.push({
+        item: finalItem,
+        rawItem: itemRaw || candidateWords.join(' '),
+        quantity: quantity,
+        unit: unit || 'pcs',
+        confidence
+      });
+      
+      // Reset for next item in the same segment
+      quantity = 1;
+      unit = null;
+      itemEn = null;
+      itemRaw = '';
+      candidateWords = [];
+      confidence = 0.9;
+    }
+  };
 
   for (let i = 0; i < tokens.length; i++) {
     const token = tokens[i];
@@ -47,20 +76,22 @@ export function parseSegment(segment: string): ExtractedEntity | null {
     // Skip fillers
     if (FILLERS.has(token)) continue;
 
-    // Try unit parse first (before number, so "dozen" maps to unit not qty)
     const u = parseUnit(token);
+    const num = parseNumberWord(token);
+
+    // If we hit a new quantity or unit, and we already have an item, push the current item and start a new one
+    if ((u !== null || num !== null) && (itemEn || candidateWords.length > 0)) {
+      pushCurrentItem();
+    }
+
     if (u !== null && unit === null) {
       unit = u;
       continue;
     }
 
-    // Try number parse
-    if (quantity === null) {
-      const num = parseNumberWord(token);
-      if (num !== null) {
-        quantity = num;
-        continue;
-      }
+    if (num !== null) {
+      quantity = num;
+      continue;
     }
 
     // Try multi-word foodwords lookup (up to 3 words)
@@ -69,7 +100,8 @@ export function parseSegment(segment: string): ExtractedEntity | null {
       if (i + len <= tokens.length) {
         const phrase = tokens.slice(i, i + len).join(' ');
         const looked = foodwordsMap[phrase];
-        if (looked && !itemEn) {
+        if (looked) {
+          if (itemEn || candidateWords.length > 0) pushCurrentItem();
           itemEn = looked;
           itemRaw = phrase;
           i += len - 1; // skip the remaining tokens of the phrase
@@ -82,7 +114,8 @@ export function parseSegment(segment: string): ExtractedEntity | null {
 
     // Try single-word foodwords lookup
     const looked = foodwordsMap[token];
-    if (looked && !itemEn) {
+    if (looked) {
+      if (itemEn || candidateWords.length > 0) pushCurrentItem();
       itemEn = looked;
       itemRaw = token;
       continue;
@@ -94,19 +127,8 @@ export function parseSegment(segment: string): ExtractedEntity | null {
     }
   }
 
-  // If no foodwords match, use remaining candidate words as raw item name
-  if (!itemEn && candidateWords.length > 0) {
-    itemRaw = candidateWords.join(' ');
-    itemEn = itemRaw;
-  }
+  // Push whatever is left
+  pushCurrentItem();
 
-  if (!itemRaw) return null; // Nothing useful found in this segment
-
-  return {
-    item: itemEn ?? itemRaw,
-    rawItem: itemRaw,
-    quantity: quantity ?? 1,
-    unit: unit ?? 'pcs',
-    confidence: (itemEn !== null && itemEn !== itemRaw) ? 0.9 : 0.6,
-  };
+  return items;
 }

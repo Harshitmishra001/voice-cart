@@ -6,45 +6,30 @@
   "halu": "milk",
   "paalu": "milk",
   "ksheeram": "milk",
-
-  "dahi": "yogurt",
-  "thayir": "yogurt",
-  "perugu": "yogurt",
-  "mosaru": "yogurt",
+  "dahi": "curd",
+  "thayir": "curd",
+  "perugu": "curd",
+  "mosaru": "curd",
   "thayiru": "yogurt",
-  "doi": "yogurt",
-
+  "doi": "curd",
   "makhan": "butter",
   "vennai": "butter",
   "venna": "butter",
   "benne": "butter",
   "loni": "butter",
-
   "cheez": "cheese",
-  "panner": "cheese",
-
-  "panir": "paneer",
   "panner": "paneer",
-
+  "panir": "paneer",
   "malai": "cream",
-
   "ghee": "ghee",
   "nei": "ghee",
   "neyyi": "ghee",
   "tuppa": "ghee",
   "tup": "ghee",
-
-  "dahi": "curd",
-  "thayir": "curd",
-  "perugu": "curd",
-  "mosaru": "curd",
-  "doi": "curd",
-
   "tamatar": "tomato",
   "thakkali": "tomato",
   "tometo": "tomato",
   "ramamulaga": "tomato",
-
   "pyaaz": "onion",
   "pyaz": "onion",
   "kanda": "onion",
@@ -55,7 +40,6 @@
   "savola": "onion",
   "piyaj": "onion",
   "peyaj": "onion",
-
   "aloo": "potato",
   "aaloo": "potato",
   "urulaikizhangu": "potato",
@@ -65,7 +49,6 @@
   "aalugadda": "potato",
   "urulakizhangu": "potato",
   "batata": "potato",
-
   "palak": "spinach",
   "saag": "spinach",
   "keerai": "spinach",
@@ -74,7 +57,6 @@
   "cheera": "spinach",
   "shaak": "spinach",
   "palang": "spinach",
-
   "kela": "banana",
   "kele": "banana",
   "vaazhaipazham": "banana",
@@ -83,12 +65,10 @@
   "balehannu": "banana",
   "pazham": "banana",
   "kola": "banana",
-
   "seb": "apple",
   "sev": "apple",
   "sebu": "apple",
   "safarchand": "apple",
-
   "aam": "mango",
   "maambazham": "mango",
   "mamidipandu": "mango",
@@ -96,7 +76,6 @@
   "manga": "mango",
   "amba": "mango",
   "keri": "mango",
-
   "nimbu": "lemon",
   "nimma": "lemon",
   "elumichai": "lemon",
@@ -104,7 +83,6 @@
   "cherunaranga": "lemon",
   "lebu": "lemon",
   "limbu": "lemon",
-
   "adrak": "ginger",
   "inji": "ginger",
   "allam": "ginger",
@@ -113,7 +91,6 @@
   "ada": "ginger",
   "ale": "ginger",
   "sonth": "ginger",
-
   "lahsun": "garlic",
   "lehsun": "garlic",
   "poondu": "garlic",
@@ -122,36 +99,28 @@
   "veluthulli": "garlic",
   "roshun": "garlic",
   "lasun": "garlic",
-
   "gajar": "carrot",
   "gajjar": "carrot",
   "gaajari": "carrot",
   "kaerat": "carrot",
-
   "shimlamirch": "capsicum",
   "kudamilagai": "capsicum",
-
   "roti": "bread",
   "pav": "bread",
   "paav": "bread",
   "paan": "bread",
-
   "biskut": "biscuits",
   "biskoot": "biscuits",
-
   "paani": "water",
   "thanni": "water",
   "neeru": "water",
   "neer": "water",
   "jal": "water",
   "jol": "water",
-
   "chai": "tea",
   "chaha": "tea",
-
   "kaapi": "coffee",
   "kafi": "coffee",
-
   "chawal": "rice",
   "chaaval": "rice",
   "arisi": "rice",
@@ -162,19 +131,16 @@
   "bhat": "rice",
   "chaul": "rice",
   "tandul": "rice",
-
   "daal": "dal",
   "paruppu": "dal",
   "pappu": "dal",
   "bele": "dal",
   "parippu": "dal",
-
   "tel": "oil",
   "ennai": "oil",
   "nune": "oil",
   "enne": "oil",
   "enna": "oil",
-
   "cheeni": "sugar",
   "chini": "sugar",
   "sakkarai": "sugar",
@@ -183,75 +149,100 @@
   "sakkare": "sugar",
   "panjasara": "sugar",
   "sakhar": "sugar",
-
   "namak": "salt",
   "noon": "salt",
   "nun": "salt",
   "uppu": "salt",
   "meeth": "salt",
-
   "atta": "flour",
   "maida": "flour",
   "maavu": "flour",
   "pindi": "flour",
   "hittu": "flour",
   "peeth": "flour",
-
   "haldi": "turmeric",
   "manjal": "turmeric",
   "pasupu": "turmeric",
   "arishina": "turmeric",
   "halad": "turmeric",
   "holud": "turmeric",
-
   "jeera": "cumin",
   "jeeragam": "cumin",
   "seeragam": "cumin",
   "jeerige": "cumin",
   "jeelakarra": "cumin",
   "jire": "cumin",
-
   "sabun": "soap",
   "saabu": "soap",
-
   "aiskrim": "ice cream",
   "kulfi": "ice cream",
-
   "matar": "frozen peas",
   "pattani": "frozen peas",
   "batani": "frozen peas",
-
   "nariyal": "coconut water",
   "naariyal": "coconut water",
   "ilaneer": "coconut water",
   "elaneer": "coconut water",
   "bondam": "coconut water",
-
   "santre": "orange juice",
   "narangi": "orange juice",
-
   "namkeen": "namkeen",
   "mixture": "namkeen",
   "chivda": "namkeen",
-
   "chocolate": "chocolate",
   "choklate": "chocolate",
   "choklait": "chocolate",
-
   "popcorn": "popcorn",
   "makkai": "popcorn",
   "jola": "popcorn",
-
   "chips": "chips",
-
   "toothpaste": "toothpaste",
   "dantmanjan": "toothpaste",
-
   "shampoo": "shampoo",
-
   "handwash": "hand wash",
   "haathdhone": "hand wash",
-
   "rusk": "rusk",
-  "toast": "rusk"
+  "toast": "rusk",
+  "whole milk": "whole milk",
+  "yogurt": "yogurt",
+  "butter": "butter",
+  "cheese": "cheese",
+  "paneer": "paneer",
+  "cream": "cream",
+  "curd": "curd",
+  "tomato": "tomato",
+  "onion": "onion",
+  "potato": "potato",
+  "spinach": "spinach",
+  "banana": "banana",
+  "apple": "apple",
+  "mango": "mango",
+  "lemon": "lemon",
+  "ginger": "ginger",
+  "garlic": "garlic",
+  "carrot": "carrot",
+  "capsicum": "capsicum",
+  "bread": "bread",
+  "sourdough": "sourdough",
+  "buns": "buns",
+  "cookies": "cookies",
+  "water": "water",
+  "orange juice": "orange juice",
+  "coconut water": "coconut water",
+  "tea": "tea",
+  "coffee": "coffee",
+  "nimbu pani": "nimbu pani",
+  "biscuits": "biscuits",
+  "rice": "rice",
+  "dal": "dal",
+  "oil": "oil",
+  "sugar": "sugar",
+  "salt": "salt",
+  "flour": "flour",
+  "turmeric": "turmeric",
+  "cumin": "cumin",
+  "soap": "soap",
+  "hand wash": "hand wash",
+  "ice cream": "ice cream",
+  "frozen peas": "frozen peas"
 }

@@ -16,16 +16,14 @@ export function extractEntities(text: string): ExtractedEntity[] {
   const results: ExtractedEntity[] = [];
 
   for (const segment of segments) {
-    const entity = parseSegment(segment);
-    if (entity) {
-      results.push(entity);
-    }
+    const parsedItems = parseSegment(segment);
+    results.push(...parsedItems);
   }
 
   // Step 3: If segmentation produced nothing, try the whole text as one segment
   if (results.length === 0) {
     const fallback = parseSegment(text);
-    if (fallback) results.push(fallback);
+    results.push(...fallback);
   }
 
   return results;
