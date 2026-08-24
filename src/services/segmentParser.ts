@@ -79,12 +79,16 @@ export function parseSegment(segment: string): ExtractedEntity[] {
     const u = parseUnit(token);
     const num = parseNumberWord(token);
 
-    // If we hit a new quantity or unit, and we already have an item, push the current item and start a new one
-    if ((u !== null || num !== null) && (itemEn || candidateWords.length > 0)) {
+    // If we hit a new quantity, but we already have one defined for this item, it means we're starting a new item
+    if (num !== null && quantity !== 1 && (itemEn || candidateWords.length > 0)) {
+      pushCurrentItem();
+    }
+    // If we hit a new unit, but we already have one defined for this item, start a new item
+    if (u !== null && unit !== null && (itemEn || candidateWords.length > 0)) {
       pushCurrentItem();
     }
 
-    if (u !== null && unit === null) {
+    if (u !== null) {
       unit = u;
       continue;
     }
